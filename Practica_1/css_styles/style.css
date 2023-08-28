@@ -2,8 +2,9 @@
 
     text-align: center;
     color: #00A550; /*some kind of dark nice-to-the-eyes green*/
-
+    font-size: 24px;
 }
+
 
 .in{
 
@@ -14,7 +15,7 @@
 
 p {
                    
-    font-size: 18px;
+    font-size: 12px;
 
 }
 
@@ -24,7 +25,7 @@ p {
 
 h3 {
 
-    font-size: 95%;
+    font-size: 15px;
     text-indent: 40px;
 }
 
