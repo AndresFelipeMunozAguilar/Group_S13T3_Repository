@@ -34,3 +34,17 @@ h3 {
     font-size: 95%;
 
 }
+
+/*Hago que pueda esribir el texto de las descripciones a la derecha de la imagen; pero, centrado*/
+.parrafo_descripcion {
+
+    display: flex;
+
+}
+
+.texto_descripcion {
+
+    align-self: flex-start;
+    text-align: justify;
+
+}
