@@ -1,0 +1,36 @@
+.ti{
+
+    text-align: center;
+    color: #00A550; /*some kind of dark nice-to-the-eyes green*/
+
+}
+
+.in{
+
+    color: #00A550;
+    text-align: left;
+
+}
+
+.integrantes {
+
+    text-indent: 40px;
+
+}
+
+
+p {
+                   
+    font-size: 18px;
+
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+
+    font-size: 95%;
+
+}
