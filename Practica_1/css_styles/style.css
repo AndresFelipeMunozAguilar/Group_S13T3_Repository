@@ -12,13 +12,6 @@
 
 }
 
-.integrantes {
-
-    text-indent: 40px;
-
-}
-
-
 p {
                    
     font-size: 18px;
@@ -32,7 +25,7 @@ p {
 h3 {
 
     font-size: 95%;
-
+    text-indent: 40px;
 }
 
 /*Hago que pueda esribir el texto de las descripciones a la derecha de la imagen; pero, centrado*/
@@ -46,5 +39,13 @@ h3 {
 
     align-self: flex-start;
     text-align: justify;
+    margin-left: 25px;
+    margin-right: 25px;
+
+}
+
+.imagen_descripcion {
+
+    margin-left: 40px;
 
 }
