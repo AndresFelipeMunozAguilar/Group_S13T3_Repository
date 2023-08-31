@@ -1,17 +1,29 @@
 .ti{
 
     text-align: center;
-    color: #00A550; /*some kind of dark nice-to-the-eyes green*/
+    color: whitesmoke; /*some kind of dark nice-to-the-eyes green*/
     font-size: 24px;
+    background-color: black;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
 }
 
+.subt{
+background-color: black;
+color:whitesmoke;
+border-style: solid;
+    border-color: rgb(255, 255, 255);}
 
 .in{
-
-    color: #00A550;
+    font-style: italic;
+    color: whitesmoke;
     text-align: left;
 
+    background-color: black;
+    border-color: rgb(0, 0, 0);
+
 }
+
 
 p {
                    
@@ -50,3 +62,11 @@ h3 {
     margin-left: 40px;
 
 }
+
+body{
+    width: 80%;
+    position: absolute;
+    margin: 5%,5%,5%,5%;
+    border-width: 5%;
+}
+
