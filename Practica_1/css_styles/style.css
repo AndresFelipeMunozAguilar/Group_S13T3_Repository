@@ -1,27 +1,23 @@
 .ti{
 
     text-align: center;
-    color: whitesmoke; /*some kind of dark nice-to-the-eyes green*/
+    color: black; /*some kind of dark nice-to-the-eyes green*/
     font-size: 24px;
-    background-color: black;
+    
     border-style: solid;
     border-color: rgb(255, 255, 255);
 }
 
 .subt{
-background-color: black;
-color:whitesmoke;
+
+color:black;
 border-style: solid;
     border-color: rgb(255, 255, 255);}
 
 .in{
     font-style: italic;
-    color: whitesmoke;
-    text-align: left;
-
-    background-color: black;
-    border-color: rgb(0, 0, 0);
-
+    color: black;
+    text-align: center;
 }
 
 
@@ -64,7 +60,7 @@ h3 {
 }
 
 body{
-    width: 80%;
+    
     position: absolute;
     margin: 5%,5%,5%,5%;
     border-width: 5%;
