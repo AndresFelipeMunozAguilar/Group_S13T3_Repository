@@ -15,5 +15,7 @@ Andrés Felipe Muñoz Aguilar
     - Compuerta Or: Empecé con la expresión "A + B", tras esto, le apliqué la Ley de DeMorgan, resultando: ~[ (~A) * (~B) ] y, como ya había hecho la función "Not" con cumpuertas "Nand" anteriormente, aproveché ese código
     y lo usé en esta compuerta. Finalmente, lo que escribí en el hdl de la compuerta or fue una compuerta Nand cuyas entradas son, respectivamente: Not(a) y Not(b) 
 
-    - wpeojw
+    - Compuerta And: Como ya tengo el progrmado el funcionamiento de la compuerta "Or" y la compuerta "Not" en función de compuertas "Nand", ahora, puedo usar esas compuertas para programar la lógica de la compuerta "And".
+    Para esto empecé con la expresión "A * B" y le apliqué DeMorgan, resultando: " ~[ (~A) + (~B) ]" y esta última expresión de acá fue la que programé en "And.hdl"
+
     - spompk
