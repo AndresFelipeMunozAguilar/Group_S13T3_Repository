@@ -11,6 +11,9 @@ Andrés Felipe Muñoz Aguilar
 
     Vemos que, efectivamente, ~A = (~A) + (~A), entonces, a partir de ahí, desarrollé, a través de la Ley de Demorgan una expresión para convertir la compuerta "OR" en una compuerta "Nand". Esta es: (~A) + (~A) 
     -- aplico DeMorgan  -->  ~[ (A) * (A) ] Entonces, vemos que: ~A = ~[ (A) * (A) ] o, lo que es igual, una compuerta and cuyas entradas son la variable A. Y eso fue lo que programé en el hdl de la compuerta "Not"
-    - eorij
+
+    - Compuerta Or: Empecé con la expresión "A + B", tras esto, le apliqué la Ley de DeMorgan, resultando: ~[ (~A) * (~B) ] y, como ya había hecho la función "Not" con cumpuertas "Nand" anteriormente, aproveché ese código
+    y lo usé en esta compuerta. Finalmente, lo que escribí en el hdl de la compuerta or fue una compuerta Nand cuyas entradas son, respectivamente: Not(a) y Not(b) 
+
     - wpeojw
     - spompk
