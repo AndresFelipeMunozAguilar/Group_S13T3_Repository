@@ -22,5 +22,9 @@ Para esto empecé con la expresión "A * B" y le apliqué DeMorgan, resultando: 
 - Compuerta Xor: Esta compuerta fue fácil de programar, pues, todo lo que tuve que buscar fue la definición de la compuerta Xor a través de compuertas básicas. Esta se define así: $A ⊕ B$ = $[ (A) * (\neg B) ] + [ (\neg A) * (B) ]$
 entonces, esto último fue lo que programé en el hdl de la compuerta Xor. Entonces, negué la entrada "A" y la entrada "B"; luego, uní $"A" y "\neg B"$ a través de una compuerta And (Que ya había hecho, a base de compuertas
 Nand); hice lo mismo con las variables $"\neg A" , "B"$ y, finalmente, uní ambas compuertas anteriores a través de la compuerta Or.
+<br>
 
-![hola]("./../images/muximg.png")
+
+
+![bueno...](images/muximg.png)
+- Mux:
