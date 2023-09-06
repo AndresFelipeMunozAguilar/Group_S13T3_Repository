@@ -18,4 +18,6 @@ Andrés Felipe Muñoz Aguilar
     - Compuerta And: Como ya tengo el progrmado el funcionamiento de la compuerta "Or" y la compuerta "Not" en función de compuertas "Nand", ahora, puedo usar esas compuertas para programar la lógica de la compuerta "And".
     Para esto empecé con la expresión "A * B" y le apliqué DeMorgan, resultando: " ~[ (~A) + (~B) ]" y esta última expresión de acá fue la que programé en "And.hdl"
 
-    - spompk
+    - Compuerta Xor: Esta compuerta fue fácil de programar, pues, todo lo que tuve que buscar fue la definición de la compuerta Xor a través de compuertas básicas. Esta se define así: A ⊕ B = [ (A) * (~B) ] + [ (~A) * (B) ]
+    entonces, esto último fue lo que programé en el hdl de la compuerta Xor. Entonces, negué la entrada "A" y la entrada "B"; luego, uní "A" y "~B" a través de una compuerta And (Que ya había hecho); hice lo mismo con las
+    variables "~A" y "~B" y, finalmente, uní ambas compuertas anteriores a través de la compuerta Or.
