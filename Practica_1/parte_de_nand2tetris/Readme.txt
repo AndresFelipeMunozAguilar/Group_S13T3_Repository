@@ -19,5 +19,5 @@ Andrés Felipe Muñoz Aguilar
     Para esto empecé con la expresión "A * B" y le apliqué DeMorgan, resultando: " ~[ (~A) + (~B) ]" y esta última expresión de acá fue la que programé en "And.hdl"
 
     - Compuerta Xor: Esta compuerta fue fácil de programar, pues, todo lo que tuve que buscar fue la definición de la compuerta Xor a través de compuertas básicas. Esta se define así: A ⊕ B = [ (A) * (~B) ] + [ (~A) * (B) ]
-    entonces, esto último fue lo que programé en el hdl de la compuerta Xor. Entonces, negué la entrada "A" y la entrada "B"; luego, uní "A" y "~B" a través de una compuerta And (Que ya había hecho); hice lo mismo con las
-    variables "~A" y "~B" y, finalmente, uní ambas compuertas anteriores a través de la compuerta Or.
+    entonces, esto último fue lo que programé en el hdl de la compuerta Xor. Entonces, negué la entrada "A" y la entrada "B"; luego, uní "A" y "~B" a través de una compuerta And (Que ya había hecho, a base de compuertas
+    Nand); hice lo mismo con las variables "~A" y "B" y, finalmente, uní ambas compuertas anteriores a través de la compuerta Or.
