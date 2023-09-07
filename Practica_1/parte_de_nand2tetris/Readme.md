@@ -82,6 +82,7 @@ Un Mux16 se usara para las entradas A y B con el selector[0] y se usara el segun
 <br>
 
 
+Andrés Mejía
 - AND[16]
 
 Este chip realiza una operación AND de 16 bits bit a bit, por lo que vamos a explicar sus componentes
