@@ -26,7 +26,7 @@ Nand); hice lo mismo con las variables $"\neg A" , "B"$ y, finalmente, uní amba
 <br>
 <br>
 
-
+Luis Daniel Lemus
 ![bueno...](images/muximg.png)
 > imagen de un Mux
 
