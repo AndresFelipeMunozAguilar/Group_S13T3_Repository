@@ -76,7 +76,11 @@ Un Mux16 se usara para las entradas A y B con el selector[0] y se usara el segun
     Mux16(a=c, b=d, sel=sel[0], out=cd);
     Mux16(a=ab, b=cd, sel=sel[1], out=out);
 ```
-Andres Felipe Mejia Perdomo
+
+
+-- Andres Felipe Mejia Perdomo
+
+
 
 - AND[16]
 
