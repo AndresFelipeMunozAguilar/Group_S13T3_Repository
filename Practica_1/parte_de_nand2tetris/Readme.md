@@ -79,6 +79,8 @@ Un Mux16 se usara para las entradas A y B con el selector[0] y se usara el segun
 
 <br>
 <br>
+<br>
+
 
 Andres Felipe Mejia Perdomo
 
