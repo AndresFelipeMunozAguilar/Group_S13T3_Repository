@@ -1,11 +1,13 @@
 .ti{
 
     text-align: center;
-    color: black; /*some kind of dark nice-to-the-eyes green*/
+    color: black; /*some kind of dark nice-to-the-eyes green   border-style: solid;
+    border-color: black;*/
     font-size: 24px;
-    
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
+   
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
 }
 
 .subt{
@@ -39,30 +41,41 @@ h3 {
 
 /*Hago que pueda esribir el texto de las descripciones a la derecha de la imagen; pero, centrado*/
 .parrafo_descripcion {
-
+    
     display: flex;
-
+    margin-left: 5%;
+    margin-right: 5%;
+   
 }
 
 .texto_descripcion {
 
+    font-size: 15px;
     align-self: flex-start;
     text-align: justify;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
 
 }
 
 .imagen_descripcion {
 
     margin-left: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
 }
 
 body{
-    
-    position: absolute;
+    text-align: center;
+    /*position: absolute;*/
     margin: 5%,5%,5%,5%;
-    border-width: 5%;
+    border-width: 20%;
 }
 
+hr{
+    width: 90%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
