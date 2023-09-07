@@ -76,3 +76,36 @@ Un Mux16 se usara para las entradas A y B con el selector[0] y se usara el segun
     Mux16(a=c, b=d, sel=sel[0], out=cd);
     Mux16(a=ab, b=cd, sel=sel[1], out=out);
 ```
+Andres Felipe Mejia Perdomo
+
+- AND[16]
+
+Este chip realiza una operación AND de 16 bits bit a bit, por lo que vamos a explicar sus componentes
+
+IN a[16], b[16]; define dos conjuntos de 16 entradas cada uno, a y b, que representan dos números binarios de 16 bits que se desean “ANDear”.
+
+OUT out[16] define un conjunto de 16 salidas, out, que contendrán el resultado de la operación AND para cada par de bits correspondientes en a y b.
+
+Se implementan 16 puertas lógicas AND individuales para cada par de bits correspondientes en a y b. Por ejemplo, And(a=a[0], b=b[0], out=out[0]); realiza la operación AND para los bits más bajos de a y b y almacena el resultado en out[0]. Esto se repite para los otros 15 bits, de modo que al final tendrás 16 salidas out, cada una conteniendo el resultado de la operación AND para un par de bits correspondientes.
+
+- Or8Way
+
+![bueno...](images/Or8Way.png)
+
+Este chip, llamado Or8Way, realiza una operación OR de 8 señales de entrada (in[0] a in[7]) y produce una única salida llamada out. La salida será 1 si al menos una de las entradas es 1; de lo contrario, será 0.
+
+Para lograr esto, se implementan varias operaciones OR en grupos más pequeños, comenzando con parejas de entradas y luego combinando los resultados parciales. Cada operación OR se realiza utilizando una puerta lógica OR (Or).
+
+Por ejemplo, Or(a = in[0], b = in[1], out = c1); calcula la operación OR entre in[0] y in[1] y almacena el resultado en c1. Este proceso se repite para las demás parejas de entradas hasta obtener resultados parciales (c1, c2, c3, c4).
+
+Luego, se combinan estos resultados parciales (c1 con c2, c3 con c4, c5 con c6) para obtener la salida final out. La salida será 1 si al menos una de las entradas in es 1, y será 0 si todas las entradas in son 0.
+
+- DMux4Way
+
+![bueno...](images/DMux4Way.png)
+
+El chip DMux4Way es un demultiplexor de 4 vías. Toma una señal de entrada in y un selector de 2 bits sel, y dirige la señal de entrada a una de las cuatro salidas posibles a, b, c o d, según los valores de los bits de selección sel[0] y sel[1].
+
+Para lograr esto, la señal de entrada in se pasa primero a través de dos demultiplexores (DMux) en cascada. El primer demultiplexor utiliza sel[1] como selector para dirigir la señal a one o two. Luego, el segundo demultiplexor utiliza sel[0] como selector para dirigir la señal de one a a o b, y la señal de two a c o d.
+
+El resultado es que, dependiendo de los valores de sel[0] y sel[1], una de las salidas a, b, c o d contendrá la señal de entrada in, mientras que las otras tres salidas serán 0.
