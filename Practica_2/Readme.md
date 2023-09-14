@@ -17,3 +17,7 @@ Para esto necesitamos que en el caso único de que si a y b ambos valgan 1 devue
 ```
 And(a=a, b=b, out=carry);
 ```
+
+>Add16:
+<br>
+El Add16 requiere 2 entradas a y b, que es un vector 
