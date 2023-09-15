@@ -20,4 +20,23 @@ And(a=a, b=b, out=carry);
 
 >Add16:
 <br>
-El Add16 requiere 2 entradas a y b, que es un vector 
+El Add16 requiere 2 entradas a y b, las cuales son de 16 bits.<br>
+Lo que se va a realizar como su nombre sugiere son 16 sumas.<br>
+Estas sumas son encadenadas, o sea que llevan el carry de la suma anterior y al final ignora el carry de la ultima suma.<br>
+Por eso la primera linea sería:
+
+```
+HalfAdder(a=a[0], b=b[0], sum=out[0], carry=c1);
+```
+Esta suma nos da el primer valor de  OUT y el carry sería el que se usaría para la siguiente suma usando un FullAdder:
+
+```
+FullAdder(a=a[1], b=b[1], c=c1, sum=out[1], carry=c2);
+```
+
+Esta linea seguiría hasta a[15] y b[15] devolviendo el ultimo out, out[15]. Pero también nos quedaría el carry=c16 el cual es ignorado.
+
+```
+FullAdder(a=a[15], b=b[15], c=c15, sum=out[15], carry=c16);
+```
+
