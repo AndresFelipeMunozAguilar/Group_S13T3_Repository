@@ -17,6 +17,15 @@ Para esto necesitamos que en el caso único de que si a y b ambos valgan 1 devue
 ```
 And(a=a, b=b, out=carry);
 ```
+>Full-Adder
+
+![fulladder](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/98712631/d9505dda-87ab-4f73-8a8d-867547450dbc)
+
+Siguiendo la idea anterior, el half-adder es un circuito lógico que puede sumar dos bits de entrada, pero presenta limitaciones cuando se intenta realizar sumas con más de dos bits. Cuando necesitas sumar números binarios de tres o más bits, surge la necesidad de utilizar un circuito más complejo conocido como un Full-Adder.
+
+El Full-Adder es un componente fundamental en la aritmética binaria y se construye combinando varios Half-Adders. A diferencia del Half-Adder que solo puede sumar dos bits a la vez, el Full-Adder es capaz de sumar tres bits: dos bits de entrada (A y B) y un bit de acarreo de la suma anterior (Cin). El resultado de la suma se obtiene en dos partes: la suma (Sum) y el bit de acarreo de salida (Cout). 
+
+Este resuelve el problema de llevar a cabo sumas con múltiples entradas, permitiendo que se realicen sumas de números binarios de cualquier longitud al conectar varios Full-Adders en cascada. De esta manera, se pueden realizar sumas de números binarios de forma eficiente y precisa en circuitos digitales, lo que es esencial en la arquitectura de computadoras y en otros sistemas electrónicos que manejan operaciones aritméticas binarias complejas.
 
 >Add16:
 <br>
