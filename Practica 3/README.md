@@ -1,4 +1,4 @@
-Este readme corresponde a la tercer proyecto del curso de nand2tetris, que nos permite construir gradualmente una unidad RAM atraves de compuertas logicas adecuadas para ello para construccion de chips descritos en esta practica. A continuacion se describe una explicacion de cada uno de los chips y como se llego a su correspondiente solucion.
+Este readme corresponde a la tercer proyecto del curso de nand2tetris, que nos permite construir gradualmente una unidad RAM atraves de compuertas logicas adecuadas para ello para construccion de chips descritos en esta practica. A continuacion se describe una explicacion de cada uno de los chips y como se llego a su correspondiente solucion. Esta sección de la práctica fue realizada por los estudiantes: Andrés Mejía y Andrés Muñoz Aguilar, respectivamente.
 
 # Bit
 
@@ -50,6 +50,15 @@ Para implementar esta funcionalidad, se utilizan los siguientes componentes:
 
 - Se utiliza un chip Mux8Way16 para seleccionar el valor de salida correcto (out0, out1, ..., out7) basado en la dirección especificada por address[3..5]. El valor seleccionado se emite como la salida out de la memoria.
 
+#RAM 512
+
+Para preparar este y los siguientes chips se necesitaron varias horas de estudio teórico con el soporte audiovisual que proporciona nand2tetris a través de youtube.
+
+    - Descripción del chip
+
+    - Como funciona
+
+    - Como lo implementé
 
 
 
