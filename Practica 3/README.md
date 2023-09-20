@@ -54,7 +54,7 @@ Para implementar esta funcionalidad, se utilizan los siguientes componentes:
 
 Para preparar este y los siguientes chips se necesitaron varias horas de estudio teórico con el soporte audiovisual que proporciona nand2tetris a través de youtube.
 
-- Descripción del chip
+- Descripción del chip: Una RAM de 512MB (megabytes) se refiere a una memoria de acceso aleatorio que tiene una capacidad de almacenamiento de 512 megabytes. La RAM se utiliza en las computadoras y otros dispositivos electrónicos para almacenar temporalmente datos y programas que se están utilizando activamente. Una RAM de 512MB es relativamente pequeña en comparación con las capacidades actuales, pero puede ser suficiente para tareas informáticas básicas, como navegación web y procesamiento de documentos. Sin embargo, para aplicaciones más exigentes, como edición de video o juegos avanzados, se suelen requerir capacidades de RAM más grandes para un rendimiento óptimo. Además, al tener una capacidad de 512 MB, se puede realizar juntando 8 rams de capaacidad de 64 MB cada una, pues, al usar 8 de estas, se multiplican sus capacidades indiciduales por 8, resultando en 512 MB.
 
 - Como funciona
 
