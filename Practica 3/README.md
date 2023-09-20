@@ -59,6 +59,7 @@ Para preparar este y los siguientes chips se necesitaron varias horas de estudio
 - Como funciona: Al tener una capacidad de 512 registros, se puede realizar juntando 8 rams de capaacidad de 64 registros cada una, pues, al usar 8 de estas, se multiplican sus capacidades individuales por 8, resultando en 512 registros.
 
 - Como lo implementé: Debido a la estructura que posee, el análisis que se seguirá es similar al de las anteriores partes. Primero, sedebe considerar de que longitud es la palabra de "address". En este caso, "address" tiene una longitud de 9 bits. Lo que quiere decir que permite agrupar las 512 posibilidades distintas en 8 grupos de 64 posibilidades de combinación cada uno. Así, podemos coger los primeros 3 bits más significativos del "address" para seleccionar hacia que ram de 8 registros se dirigirá cierta input. Después, como el "address" de cada una de las ram de 64 registros tiene una longitud de 6 bits y este número encaja de manera exacta con el número de bits que restan del "load" para una ram de 512 registros tras quitarles los 3 primeros bits más significativos, usaremos los últimos 6 bits menos significativos para seleccionar el "address" al cual se dirigirá la información tras haber seleccionado a que ram de 64 registros se dirigirá cierta input.
+
 Para esto, primero
 
 
