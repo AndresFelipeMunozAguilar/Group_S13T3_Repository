@@ -50,15 +50,15 @@ Para implementar esta funcionalidad, se utilizan los siguientes componentes:
 
 - Se utiliza un chip Mux8Way16 para seleccionar el valor de salida correcto (out0, out1, ..., out7) basado en la dirección especificada por address[3..5]. El valor seleccionado se emite como la salida out de la memoria.
 
-#RAM 512
+# RAM 512
 
 Para preparar este y los siguientes chips se necesitaron varias horas de estudio teórico con el soporte audiovisual que proporciona nand2tetris a través de youtube.
 
-    - Descripción del chip
+- Descripción del chip
 
-    - Como funciona
+- Como funciona
 
-    - Como lo implementé
+- Como lo implementé
 
 
 
