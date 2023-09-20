@@ -54,11 +54,14 @@ Para implementar esta funcionalidad, se utilizan los siguientes componentes:
 
 Para preparar este y los siguientes chips se necesitaron varias horas de estudio teórico con el soporte audiovisual que proporciona nand2tetris a través de youtube.
 
-- Descripción del chip: Una RAM de 512MB (megabytes) se refiere a una memoria de acceso aleatorio que tiene una capacidad de almacenamiento de 512 megabytes. La RAM se utiliza en las computadoras y otros dispositivos electrónicos para almacenar temporalmente datos y programas que se están utilizando activamente. Una RAM de 512MB es relativamente pequeña en comparación con las capacidades actuales, pero puede ser suficiente para tareas informáticas básicas, como navegación web y procesamiento de documentos. Sin embargo, para aplicaciones más exigentes, como edición de video o juegos avanzados, se suelen requerir capacidades de RAM más grandes para un rendimiento óptimo. Además, al tener una capacidad de 512 MB, se puede realizar juntando 8 rams de capaacidad de 64 MB cada una, pues, al usar 8 de estas, se multiplican sus capacidades indiciduales por 8, resultando en 512 MB.
+- Descripción del chip: Una RAM de 512 registros se refiere a una memoria de acceso aleatorio que tiene una capacidad de almacenamiento de 512 registros. La RAM se utiliza en las computadoras y otros dispositivos electrónicos para almacenar temporalmente datos y programas que se están utilizando activamente. Una RAM de 512 registros es relativamente pequeña en comparación con las capacidades actuales, pero puede ser suficiente para tareas informáticas básicas, como navegación web y procesamiento de documentos. Sin embargo, para aplicaciones más exigentes, como edición de video o juegos avanzados, se suelen requerir capacidades de RAM más grandes para un rendimiento óptimo.
 
-- Como funciona
+- Como funciona: Al tener una capacidad de 512 registros, se puede realizar juntando 8 rams de capaacidad de 64 registros cada una, pues, al usar 8 de estas, se multiplican sus capacidades individuales por 8, resultando en 512 registros.
 
-- Como lo implementé
+- Como lo implementé: Debido a la estructura que posee, el análisis que se seguirá es similar al de las anteriores partes. Primero, sedebe considerar de que longitud es la palabra de "address". En este caso, "address" tiene una longitud de 9 bits. Lo que quiere decir que permite agrupar las 512 posibilidades distintas en 8 grupos de 64 posibilidades de combinación cada uno. Así, podemos coger los primeros 3 bits más significativos del "address" para seleccionar hacia que ram de 8 registros se dirigirá cierta input. Después, como el "address" de cada una de las ram de 64 registros tiene una longitud de 6 bits y este número encaja de manera exacta con el número de bits que restan del "load" para una ram de 512 registros tras quitarles los 3 primeros bits más significativos, usaremos los últimos 6 bits menos significativos para seleccionar el "address" al cual se dirigirá la información tras haber seleccionado a que ram de 64 registros se dirigirá cierta input.
+
+
+# FALTAN HACER EL RAM 512 RAM 4K RAM 16K Y PC
 
 
 
