@@ -84,7 +84,7 @@ Para esto, primero se debe pasar el bit de "load" a una RAM determinada; para es
 
 - Como funciona: El chip program counter es un chip que permite hacer 3 operaciones básicas: Empezar a contar (Counter=0), aumentar en una unidad la cuenta actual (Count = Count + 1) y guardar un valor "n" dentro del contador (Counter = n)
 
-- Como lo implementé: 
+- Como lo implementé: La siguiente compuerta la implementé usando los siguientes chips: Mux16, Register y Inc16. El Mux16 para tomar el lugar de la funcionalidad de los condicionales (“If”), el chip register para almacenar la palabra de 16 bits cundo le fuera dicho y, finalmente, el Inc16 para incrementar en 1 unidad la palabra de 15 bits cuando la variable “Inc” lo indicara.
 
 # FALTAN HACER EL PC
 
