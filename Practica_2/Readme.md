@@ -59,6 +59,20 @@ Esta linea seguiría hasta a[15] y b[15] devolviendo el ultimo out, out[15]. Per
 ```
 FullAdder(a=a[15], b=b[15], c=c15, sum=out[15], carry=c16);
 ```
+
+>Inc16
+
+El chip "Inc16" es un circuito integrado diseñado para incrementar en 1 el valor de un número de 16 bits. En otras palabras, toma una entrada de 16 bits (denominada in) y produce una salida de 16 bits (denominada out) que es igual a in + 1.
+
+```
+Add16(a=in, b[0]=true, out=out);
+```
+
+Esta línea es donde se define cómo se realiza la operación de incremento en el chip "Inc16". Utiliza un chip llamado "Add16" para realizar la adición.
+a=in: Significa que la entrada a del chip "Add16" se conecta a la entrada in del chip "Inc16". En otras palabras, la entrada in del chip "Inc16" se pasa como uno de los operandos de la operación de suma en el chip "Add16".b[0]=true: Esto significa que la entrada b del chip "Add16" se establece en 1. En otras palabras, se está sumando 1 a la entrada in.
+
+En resumen, el chip "Inc16" utiliza un chip llamado "Add16" para realizar una suma en la que se agrega 1 a la entrada de 16 bits (in) y luego emite el resultado como la salida de 16 bits (out). Esto logra el efecto de incrementar en 1 el valor de entrada de 16 bits.
+
 >ALU:
 <br>
 
