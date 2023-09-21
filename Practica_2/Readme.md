@@ -59,4 +59,77 @@ Esta linea seguiría hasta a[15] y b[15] devolviendo el ultimo out, out[15]. Per
 ```
 FullAdder(a=a[15], b=b[15], c=c15, sum=out[15], carry=c16);
 ```
+>ALU:
+<br>
+![image](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/104959341/3361fdde-525e-4fdb-9aba-8bda2e09c9af)
+La anterior es la tabla con la que se debe construir el ALU.<br>
+Tenemos 6 bits de control:<br>
+zx: Si zx=1 --> x=0<br>
+nx: Si nx=1 --> x = !x (negar x) <br>
+Con zy y ny es exactamente lo mismo. <br>
+f: Si f=1 --> realice (x + y) // f=0--> (x and y)<br>
+no: Si no=1 --> f = !f (negar f)<br>
+
+Siguiendo el orden de la tabla, lo primero sería hacer que cumpla con la condicion de zx.<br>
+Para esto se usa un mux:<br>
+![image](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/104959341/808c82ce-97b4-4165-a40b-fa2844a3f921)
+La anterior es la tabla de verdad del Mux.<br>
+Si el selector es 0, la salida sera el valor de A. Si el selector es 1, la salida sera el valor de B.
+Si el selector fuera zx=1 entonces necesitariamos que B siempre fuera 0 y si zx=0 no importa porque se guarda el valor original de x.
+De ahí se llega a esta linea de codigo:
+
+```
+Mux16(a=x, b=false, sel=zx, out=zerox);
+```
+Como a es una entrada de 16 bits se mete en un Mux16, en el que siempre b=false.<br>
+Entonces la siguiente columna sería nx que busca negar x, siempre que nx=1. Entonces es similar a la anterior.<br>
+El Mux16 anterior retornaba x (despues de aplicar zx), si nx=1, se niega, si nx=0 que se mantenga el valor.<br>
+Para solucionar esto tomo x y lo niego esto sera xnegado, y para saber con que valor de x finalmente quedarse usamos un Mux donde el selector sea nx.<br>
+
+
+```
+ Not16(in=zerox, out=notx);
+```
+De esta manera negando x.<br>
+```
+ Mux16(a=zerox, b=notx, sel=nx, out=inpx);
+```
+Donde se escoje que valor dejar finalmente como x.<br>
+Esto proceso es exactamente el mismo que con zy y ny.<br>
+<br>
+Ahora sigue f, que me indica que operación realizar. Si f=1 entonces hacer x+y. Si f=0 entonces hacer xANDy.<br>
+¿Esto a que suena? A que según el valor de f debo quedarme con un valor, en pocas palabras, otro Mux con f como selector.<br>
+Así que se hace la operación de x+y(add) y la operación xAndy(and) y el selector me indica que valor tomar:
+
+```
+ Add16(a=inpx, b=inpy, out=addxy);
+ And16(a=inpx, b=inpy, out=andxy);
+ Mux16(a=andxy, b=addxy, sel=f, out=fxy);
+```
+
+Continuando toca el no, que resumiendo niega f:
+
+```
+  Not16(in=fxy, out=notfxy);
+```
+Pero toca ver el selector de no para ver si nos quedamos con f o nof:
+
+```
+  Mux16(a=fxy, b=notfxy, sel=no, out=out, out[0..7] = pzr1, out[8..15] = pzr2, out[15] = ng);
+```
+¿Porque partimos el vector out en 3 partes? La primera de 0 a 7, la segunda de 8 a 15 y la ultima es el 15vo bit, que representa el signo.<br>
+<br>
+// if (out == 0) set zr = 1<br>
+// if (out < 0) set ng = 1<br><br>
+Es debido a lo anterior, que out[15] = ng, directamente da el valor de ng, recordando que 1 indicaria que es negativo y 0 positivo.<br>
+Ahora unicamente falta zr. Para que out==0 todos sus bits deben ser 0, esto es facil ya que un Or cumple esa función. Por eso se usa el Or8Way que evalua una entrada de 8 bits comparando el primer bit con el segundo y luego el resultado de esa operación con el tercer bit y así con los 8 bits. Esto devolvera si los 8 bits contienen algún 1 o no, dando 0 si  esos 8 bits son 0. Si tenemos 16 bits, hacemos este proceso 2 veces y luego un Or entre ellas 2, de tal manera que el ultimo Or compara los primeros 7 bits con los otros 8.<br>
+```
+   Or8Way(in=pzr1, out=zr1);
+   Or8Way(in=pzr2, out=zr2);
+   Or(a=zr1, b=zr2, out=notzr);
+   Not(in=notzr, out=zr);
+```
+
+
+
 
