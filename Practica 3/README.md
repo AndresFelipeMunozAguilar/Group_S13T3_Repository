@@ -78,7 +78,15 @@ Para esto, primero se debe pasar el bit de "load" a una RAM determinada; para es
 
 - Como lo implementé: La implementación de este chip fue sencilla, debido a que tiene la misma lógica que la del chip anterior y la del anterior al anterior. Es decir, usar un DMux4way (En este caso, se usa este chip, pues se "arrejuntarán" 4 RAMS, en lugar de 8) para “redirigir” la variable “load” a una cierta RAM seleccionada a través de los primeros 2 bits del “Address”, pues, de esa forma nos aseguramos que solo haya 4 posibilidades de seleccionar alguna RAM. Tras esto, cada una de las RAM4K reciben el input respectivo y, dentro de ellas, se selecciona la RAM512 respectiva a través de los últimos 12 bits del “Address” y, tras hacer la operación respectiva de guardado o no guardado, dependiendo de la variable “Load”, la “Output” de cada RAM4K se “reunirán” en un mismo “conjunto” a través de un Mux4Way16, donde, de cada una de las entradas de 16 bit, se seleccionará una dependiendo de un selector para mostrarla como “Output”; ¿Qué selector se usará? El mismo criterio que para escoger una RAM4K: Los primeros 2 bits del “Address”
 
-# FALTAN HACER EL Y PC
+# RAM 16K
+
+- Descripción del chip: 
+
+- Como funciona: 
+
+- Como lo implementé: 
+
+# FALTAN HACER EL PC
 
 
 
