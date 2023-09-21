@@ -62,9 +62,7 @@ Para preparar este y los siguientes chips se necesitaron varias horas de estudio
 Para esto, primero se debe pasar el bit de "load" a una RAM determinada; para esto usamos un DMux8Way, así, el input será el valor de "load" y el selector serán los primeros b3 bits significativos del address. Tras haber seleccionado la RAM 64 requerida, se debe seleccionar en cuál de las 8 Ram8 que la compone se almacenará el valor del input y, ahí es donde usamos los últimos 6 bits menos significativos del address, colocándolos en el valor del "address" para cada Ram64. Finalmente, tras ya haber pasado el dato a la Ram64 correcta y, respectivamente, a su Ram8 correcta, se procederá a tomar cada una de las salidas que generan las Ram64 y se seleccionará la Ram64 correspondiente para mostrar su salida en la salida final del circuito. Esto se hará a través de un chip Mux8way16 que captura entradas de longitud 16 bit de 8 entradas diferentes y "muestra" en la salida el input indicada con el selector. Pero, ¿Que selector usaremos para mostrar la salida adecuada? Fácil, el mismo criterio que usamos para escogerla: Los primeros 3 bits más significativos del "address" de 9 bits.
 
 
-# RAM 4k
-
-Para preparar este y los siguientes chips se necesitaron varias horas de estudio teórico con el soporte audiovisual que proporciona nand2tetris a través de youtube.
+# RAM 4K
 
 - Descripción del chip: Una RAM de 4,000 registros se refiere a una memoria de acceso aleatorio que contiene 4,000 ubicaciones de almacenamiento, llamadas registros, que pueden utilizarse para guardar y acceder a datos. Cada registro puede contener información temporalmente y es accesible rápidamente para el procesador de una computadora u otro dispositivo. Estas memorias se utilizan en tareas que requieren un acceso rápido a datos, como cálculos complejos, procesamiento de gráficos y muchas otras aplicaciones en la informática.
 
@@ -72,7 +70,15 @@ Para preparar este y los siguientes chips se necesitaron varias horas de estudio
 
 - Como lo implementé: La implementación de este chip fue sencilla, debido a que tiene la misma lógica que la del chip anterior. Es decir, usar un DMux8way para “redirigir” la variable “load” a una cierta RAM seleccionada a través de los primeros 3 bits del “Address”, pues, de esa forma nos aseguramos que solo haya 7 posibilidades de seleccionar alguna RAM. Tras esto, cada una de las RAM512 reciben el input respectivo y, dentro de ellas, se selecciona la RAM64 respectiva a través de los últimos 9 bits del “Address” y, tras hacer la operación respectiva de guardado o no guardado, dependiendo de la variable “Load”, la “Output” de cada RAM512 se “reunirán” en un mismo “conjunto” a través de un Mux8Way16, donde, de cada una de las entradas de 16 bit, se seleccionará una dependiendo de un selector; ¿Qué selector se usará? El mismo criterio que para escoger una RAM512: Los primeros 3 bits del “Address”
 
-# FALTAN HACER EL RAM 4K RAM 16K Y PC
+# RAM 16K
+
+- Descripción del chip: 
+
+- Como funciona: Al tener una capacidad de 4k registros, se puede realizar juntando 8 RAMS de capacidad de 512 registros cada una, pues, al usar 8 de estas, se multiplican sus capacidades individuales por 8, resultando en 4 096 registros.
+
+- Como lo implementé: La implementación de este chip fue sencilla, debido a que tiene la misma lógica que la del chip anterior. Es decir, usar un DMux8way para “redirigir” la variable “load” a una cierta RAM seleccionada a través de los primeros 3 bits del “Address”, pues, de esa forma nos aseguramos que solo haya 7 posibilidades de seleccionar alguna RAM. Tras esto, cada una de las RAM512 reciben el input respectivo y, dentro de ellas, se selecciona la RAM64 respectiva a través de los últimos 9 bits del “Address” y, tras hacer la operación respectiva de guardado o no guardado, dependiendo de la variable “Load”, la “Output” de cada RAM512 se “reunirán” en un mismo “conjunto” a través de un Mux8Way16, donde, de cada una de las entradas de 16 bit, se seleccionará una dependiendo de un selector; ¿Qué selector se usará? El mismo criterio que para escoger una RAM512: Los primeros 3 bits del “Address”
+
+# FALTAN HACER EL RAM 16K Y PC
 
 
 
