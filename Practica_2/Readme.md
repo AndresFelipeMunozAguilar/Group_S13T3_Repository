@@ -61,7 +61,9 @@ FullAdder(a=a[15], b=b[15], c=c15, sum=out[15], carry=c16);
 ```
 >ALU:
 <br>
+
 ![image](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/104959341/3361fdde-525e-4fdb-9aba-8bda2e09c9af)
+
 La anterior es la tabla con la que se debe construir el ALU.<br>
 Tenemos 6 bits de control:<br>
 zx: Si zx=1 --> x=0<br>
