@@ -80,7 +80,7 @@ Para esto, primero se debe pasar el bit de "load" a una RAM determinada; para es
 
 # PROGRAM COUNTER (PC)
 
-- Descripción del chip: 
+- Descripción del chip: Un chip Program Counter (Contador de Programa) en el contexto de la arquitectura de computadores es un componente crucial que almacena la dirección de la instrucción actual que se está ejecutando en la unidad central de procesamiento (CPU). Funciona como un puntero que rastrea la posición de la próxima instrucción en la memoria de programa. A medida que se ejecutan las instrucciones, el Program Counter se incrementa automáticamente para apuntar a la siguiente instrucción en secuencia. Este chip es esencial para el flujo de control y la ejecución de programas, ya que asegura que las instrucciones se ejecuten en el orden correcto.
 
 - Como funciona: 
 
