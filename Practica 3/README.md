@@ -62,7 +62,7 @@ Para preparar este y los siguientes chips se necesitaron varias horas de estudio
 Para esto, primero se debe pasar el bit de "load" a una ram determinada; para esto usamos un DMux8Way, así, la input será el valor de "load" y el selector serán los primeros b3 bits significativos del address. Tras haber seleccionado la ram 64 requerida, se debe seleccionar en cual de las 8 Ram8 que la compone se almacenará el valor de la input y, ahí es donde usamos los últimos 6 bits menos significativos del address, colocándolos en el valor del "address" para cada Ram64. Finalmente, tras ya haber pasado el dato a la Ram64 correctra y, respectivamente, a su Ram8 correcta, se procederá a tomar cada una de las salidas que generan las Ram64 y se seleccionará la Ram64 correspondiente para mostrar su salida en la salida final del circuito. Esto se hará a través de un chip Mux8way16 que captura entradas de longitud 16 bit de 8 entradas diferentes y "muestra" en la salida la input indicada con el selector. Pero, ¿Que selector usaremos para mostrar la salida adecuada? Fácil, el mismo criterio que usamos para escogerla: Los primeros 3 bits más significativos del "address" de 9 bits.
 
 
-# FALTAN HACER EL RAM 512 RAM 4K RAM 16K Y PC
+# FALTAN HACER EL RAM 4K RAM 16K Y PC
 
 
 
