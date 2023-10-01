@@ -27,11 +27,13 @@ CHIP Memory {
     OUT out[16];
 
     PARTS:
-    DMux(in=load, sel=address[14], a=load-ram, b=load-devices);
-    DMux(in=load-devices, sel=address[13], a=load-screen);
-    RAM16K(in=in, load=load-ram, address=address[0..13], out=ram-out);
-    Screen(in=in, load=load-screen, address=address[0..12], out=screen-out);
-    Keyboard(out=keyboard-out);
-    Mux16(a=screen-out, b=keyboard-out, sel=address[13], out=devices-out);
-    Mux16(a=ram-out, b=devices-out, sel=address[14], out=out);
+ // Use address[14] to determine which chip should get the load command.
+ DMux(in=load, sel=address[14], a=loadR, b=loadS);
+ // Setup RAM access. Pay attention to bus width.
+ RAM16K(in=in, load=loadR, address=address[0..13], out=ROut);
+ // Setup Screen access. Pay attention to bus width.
+ Screen(in=in, load=loadS, address=address[0..12], out=SOut);
+ Keyboard(out=KOut);
+ // Use address[13..14] to determine which value should be put out.
+ Mux4Way16(a=ROut, b=ROut, c=SOut, d=KOut, sel=address[13..14], out=out);
 }
