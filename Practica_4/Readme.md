@@ -22,13 +22,15 @@ int main()
 ```
 Este código se basaba en sumar la variable "a" (Que, en el contexto del ejercicio sería el valor dentro del registro R0) tantas veces como "b" (O, en el contexto del ejercicio sería el valor dentro del registro R1) lo indicara. Así:
 
-```multiplicación a * b 
+```
+multiplicación a * b 
 Al inicio, sum = 0 
 Tras esto, el bucle analiza el multiplicando "b", si es igual a 0, entonces, el bucle no se ejecuta, 
 De lo contrario, hace una sumatoria con la variable sum donde se almacena el siguiente valor: 
 
 sum = a + a + a + a + + a + a + ... + a 
-     |<----------- b veces ---------->|```
+     |<----------- b veces ---------->|
+```
 
 
 Pero, este código debía adaptarse a como funciona el lenguaje de máquina, para ello se hicieron las siguientes adaptaciones:
