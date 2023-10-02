@@ -22,5 +22,5 @@ int main()
 ```
 Este código se basaba en sumar la variable "a" (Que, en el contexto del ejercicio sería el valor dentro del registro R0) tantas veces como "b" (O, en el contexto del ejercicio sería el valor dentro del registro R1) lo indicara. Así:
 
-'multiplicación a * b  -> entonces, en el inicio, sum = 0; tras esto, el bucle analiza el multiplicando "b", si es igual a 0, entonces, el bucle no se ejecuta, de lo contrario, hace una sumatoria con la variable sum donde se almacena
-el siguiente valor: sum = a (1 vez) + a (2 veces) + a (3 veces) + ... + a (b veces)'
+`multiplicación a * b  -> entonces, en el inicio, sum = 0; tras esto, el bucle analiza el multiplicando "b", si es igual a 0, entonces, el bucle no se ejecuta, de lo contrario, hace una sumatoria con la variable sum donde se almacena
+el siguiente valor: sum = a (1 vez) + a (2 veces) + a (3 veces) + ... + a (b veces)`
