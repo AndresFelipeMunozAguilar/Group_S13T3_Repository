@@ -36,5 +36,7 @@ sum = a + a + a + a + + a + a + ... + a
 Pero, este código debía adaptarse a como funciona el lenguaje de máquina, para ello se hicieron las siguientes adaptaciones:
 
 - Primero, en lugar de crear nuevas variables, simplemente se necesitaría revisar el valor que se encuentra dentro de los registros R0 y R1
-- Segundo, es OBLIGATORIO colocar dentro del registro R2 el valor igual a cero, pues, de otra forma, la sumatoria se vería alterada y daría un resultado incorrecto como, por ejemplo: R2 = 4 + R1 + R1 + R1 + ... + R1. Lo cual da un valor incorrecto
-- Tercero, se deben inicializar estas variables:
+- Segundo, es OBLIGATORIO colocar dentro del registro R2 el valor igual a cero, pues, de otra forma, la sumatoria se vería alterada y daría un resultado incorrecto como, por ejemplo: R2 = 4 + R1 + R1 + R1 + ... + R1. Lo cual da un valor incorrecto. Csbe aclarar que, en este caso, R2 cumplirá la misma función de sum
+- Tercero, se deben inicializar esta variable: i = 1, pues, i será la variable auxiliar que controlará la lógica del bucle.
+
+La lógica del bucle es la siguiente:
