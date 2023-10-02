@@ -30,6 +30,7 @@ De lo contrario, hace una sumatoria con la variable sum donde se almacena el sig
 sum = a + a + a + a + + a + a + ... + a 
      |<----------- b veces ---------->|```
 
+
 Pero, este código debía adaptarse a como funciona el lenguaje de máquina, para ello se hicieron las siguientes adaptaciones:
 
 - Primero, en lugar de crear nuevas variables, simplemente se necesitaría revisar el valor que se encuentra dentro de los registros R0 y R1
