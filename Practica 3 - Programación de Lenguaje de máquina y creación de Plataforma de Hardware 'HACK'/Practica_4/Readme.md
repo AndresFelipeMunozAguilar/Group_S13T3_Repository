@@ -116,3 +116,52 @@ Finalmente, hacemos el código del END, para cuando se salga del bucle:
 ```
 
 # FILL
+
+La que hace este codigo es, en el emulador, mostrar un pantalla y si se mantiene presionada cualquier tecla de nuestro teclado, se vera una pantalla negra, de lo contrario se vera blanca.
+```
+(INIT)  	//inicializamos i - índice que se ejecutara en los píxeles de la pantalla
+	@8192	 // 32 * 256 numero de lineas de los pixeles de 16 bits para cubrir toda la pantalla 
+	@i       //inicializamos el variable indice a 8192, esta es la direccion restante que queda para colorear la pantalla 
+	M=D
+```
+Primero creamos una variable y la inicializamos a 81292 que es igual  a 32*256, esto para que cubra toda la pantalla.
+
+```
+  (LOOP)               
+	@i
+	M=M-1
+	D=M
+	@INIT
+	D;JLT               // si el índice es menor que 0, ir a INICIALIZADOR DE ÍNDICE para reiniciarlo
+	@KBD	            // carga la dirección del teclado
+	D=M
+	@WHITE		        // si (Memoria en la dirección del teclado == 0), lo que significa que no se ha presionado ninguna tecla, ve a WHITE; de lo contrario, ve a BLACK
+
+	D;JEQ
+	@BLACK
+	0;JMP
+```
+
+De esta forma le asignamos un color a cuando la memoria de la direccion del teclado sea 0 la pantalla es blanca de lo contrario es negra
+
+```
+(BLACK)             
+	@SCREEN            // carga la primera dirección de la pantalla - 16384 (0x4000)
+	D=A
+	@i
+	A=D+M              // agrega el índice actual a la primera dirección de la pantalla para colorear el conjunto actual de 16 píxeles
+	M=-1               // establece el valor en la dirección actual en -1, de modo que toda la palabra sea 1...1 (16 bits de longitud), lo que significa que los 16 píxeles estarán "pintados" de negro.
+	@LOOP              // salta de nuevo al indexador para avanzar el índice hacia atrás.
+	0;JMP
+
+(WHITE)
+	@SCREEN            // carga la primera dirección de la pantalla - 16384 (0x4000)
+	D=A                
+	@i        
+	A=D+M              // agrega el índice actual a la primera dirección de la pantalla para colorear el conjunto actual de 16 píxeles
+	M=0                // establece el valor en la dirección actual en 0, de modo que toda la palabra sea 0....0 (16 bits de longitud), lo que significa que los 16 píxeles estarán "pintados" de blanco.
+	@LOOP           // salta de nuevo al indexador para avanzar el índice hacia atrás.
+	0;JMP
+```
+
+Con esto cargamos la primera direccion de la pantalla le damos el indice actual para colorear y pintar cada pixel de negro. Lo mismo haremos cuando la pantalla tenga que ser blanca
