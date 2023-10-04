@@ -9,18 +9,9 @@ En el caso del tercer proyecto, el objetivo es usar los chips creados en el cap�
 
 | Característica          | Lógica Aritmética     | Lógica Secuencial     |
 |-------------------------|-----------------------|-----------------------|
-| Tipo de Operaciones     | Realiza operaciones   | Almacena y controla   |
-|                         | aritméticas y lógicas | secuencias de datos   |
-| Ejemplos de compuertas  | Compuertas AND, OR,   | Flip-flops, registros,|
-|                         | XOR, NOT              | contadores            |
-| Propósito               | Realiza cálculos      | Almacena información  |
-|                         | y procesamiento de   | y controla el flujo  |
-|                         | datos numéricos       | de datos en el tiempo|
-| Estado Interno          | No mantiene un estado | Mantiene un estado    |
-|                         | interno persistente   | interno persistente   |
-| Salida                  | Dependiente solo de   | Dependiente de la     |
-|                         | las entradas actuales| historia de entradas  |
-| Ejemplo de Aplicación   | Sumadores,            | Registros de desplaz. |
-|                         | comparadores,         | Contadores,           |
-|                         | operaciones lógicas,  | Máquinas de estados,  |
-|                         | multiplicadores       | Memorias RAM          |
+| Tipo de Operaciones     | Realiza operaciones aritméticas y lógicas  | Almacena y controla secuencias de datos |
+| Ejemplos de compuertas  | Compuertas AND, OR, XOR, NOT | Flip-flops, registros, contadores|
+| Propósito               | Realiza cálculos y procesamientos de datos numéricos | Almacena información y controla el dlujo de datos a lo largo del tiempo  |
+| Estado Interno          | No mantiene un estado interno persistente | Mantiene un estado interno persistente    |
+| Salida                  | Dependiente solo de las entradas actuales  | Dependiente de las salidas pasadas     |
+| Ejemplo de Aplicación   | Sumadores, comparadores, operaciones lógicas, multiplicadores  | Registros de desplazamiento, contadores, máquinas de estados, memorias RAM |
