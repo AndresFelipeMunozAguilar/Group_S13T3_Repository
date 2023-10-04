@@ -14,4 +14,4 @@ En el caso del tercer proyecto, el objetivo es usar los chips creados en el cap�
 | Propósito               | Realiza cálculos y procesamientos de datos numéricos | Almacena información y controla el dlujo de datos a lo largo del tiempo  |
 | Estado Interno          | No mantiene un estado interno persistente | Mantiene un estado interno persistente    |
 | Salida                  | Depende sólo de las entradas actuales  | Depende de las entradas actuales y las salidas pasadas     |
-| Ejemplo de Aplicación   | Sumadores, comparadores, operaciones lógicas, multiplicadores  | Registros de desplazamiento, contadores, máquinas de estados, memorias RAM |
+| Ejemplos de Aplicación   | Sumadores, comparadores, operaciones lógicas, multiplicadores  | Registros de desplazamiento, contadores, máquinas de estados, memorias RAM |
