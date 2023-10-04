@@ -5,4 +5,22 @@ En este caso, hay varios proyectos. El objetivo del **Proyecto 2** es usar las c
 
 En el caso del tercer proyecto, el objetivo es usar los chips creados en el capítulo 3 del libro guía del curso, además de el chip DFF que se entrega como chip base, para crear una serie de chips que culminan con la creación de 2 chips fundamentales: Una ram de 16384 registros y un PC (Program Counter). Estos chips son: DFF, Bit, Register, RAM8, RAM64, RAM512, RAM4K, RAM16K y PC. Para ello se debe conocer el funcionamiento del DFF, analizar el funcionamiento del registro y del registro de 16 bits para, posteriormente, extender esta lógica al funcionamiento de la memoria RAM de 8 registros y, así, sucesivamente, hasta llegar a la memoria de 16384 registros y, finalmente, estudiar la teoría presentada en el libro. Esto último para potenciar los procesos descritos anteriormente.
 
-# Explique las principales diferencias entre la lógica aritmética y la lógica secuencial.
+# Explique las principales diferencias entre la lógica aritmética y la lógica secuencial
+
+| Característica          | Lógica Aritmética     | Lógica Secuencial     |
+|-------------------------|-----------------------|-----------------------|
+| Tipo de Operaciones     | Realiza operaciones   | Almacena y controla   |
+|                         | aritméticas y lógicas | secuencias de datos   |
+| Ejemplos de compuertas  | Compuertas AND, OR,   | Flip-flops, registros,|
+|                         | XOR, NOT              | contadores            |
+| Propósito               | Realiza cálculos      | Almacena información  |
+|                         | y procesamiento de   | y controla el flujo  |
+|                         | datos numéricos       | de datos en el tiempo|
+| Estado Interno          | No mantiene un estado | Mantiene un estado    |
+|                         | interno persistente   | interno persistente   |
+| Salida                  | Dependiente solo de   | Dependiente de la     |
+|                         | las entradas actuales| historia de entradas  |
+| Ejemplo de Aplicación   | Sumadores,            | Registros de desplaz. |
+|                         | comparadores,         | Contadores,           |
+|                         | operaciones lógicas,  | Máquinas de estados,  |
+|                         | multiplicadores       | Memorias RAM          |
