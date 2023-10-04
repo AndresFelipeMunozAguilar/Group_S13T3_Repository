@@ -13,5 +13,5 @@ En el caso del tercer proyecto, el objetivo es usar los chips creados en el cap�
 | Ejemplos de compuertas  | Compuertas AND, OR, XOR, NOT | Flip-flops, registros, contadores|
 | Propósito               | Realiza cálculos y procesamientos de datos numéricos | Almacena información y controla el dlujo de datos a lo largo del tiempo  |
 | Estado Interno          | No mantiene un estado interno persistente | Mantiene un estado interno persistente    |
-| Salida                  | Dependiente solo de las entradas actuales  | Dependiente de las salidas pasadas     |
+| Salida                  | Depende sólo de las entradas actuales  | Depende de las entradas actuales y las salidas pasadas     |
 | Ejemplo de Aplicación   | Sumadores, comparadores, operaciones lógicas, multiplicadores  | Registros de desplazamiento, contadores, máquinas de estados, memorias RAM |
