@@ -46,9 +46,17 @@ Aquí se configura el acceso a una memoria RAM de 16K palabras. La señal de ent
 
 ```
 Screen(in=in, load=loadS, address=address[0..12], out=SOut)
+Keyboard(out=KOut);
 ```
 
 El acceso a una pantalla de visualización lo indica esta linea de codigo. 
 La señal de entrada se proporciona como in, la señal de carga se controla mediante loadS de la misma forma esta es intervenida por el Dmux inicial
-y la dirección de la pantalla se determina a través de address[0..12]. Los datos de la pantalla se extraen como SOut.
+y la dirección de la pantalla se determina a través de address[0..12]. Los datos de la pantalla se extraen como SOut. La linea de Keyboard toma las señales que este y las guarda en Kout.
+
+```
+Mux4Way16(a=ROut, b=ROut, c=SOut, d=KOut, sel=address[13..14], out=out);
+```
+
+Para finalizar el proceso se realiza una operación de multiplexación de 4 vías. Se selecciona una de las cuatro señales de entrada guardadas anteriormente
+(ROut, ROut, SOut o KOut) dependiendo de la combinacion de bits de address[13..14]. El resultado de esta multiplexación se proporciona como out.
 
