@@ -26,4 +26,13 @@ Finalmente ahora tenemos que trabajar con la parte de la memoria, para esto llam
     Memory(in=outM, load=writeM, address=addressM, out=mData);
 
 ```
+> MEMORY<br>
 
+![memory](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/98712631/b4c3585a-fc8e-435a-846d-6c5538575427)
+
+Se inicia la implementacion de la memoria con la siguiente linea de codigo
+
+```
+    Memory(in=outM, load=writeM, address=addressM, out=mData);
+
+```
