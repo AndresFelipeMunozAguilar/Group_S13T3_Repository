@@ -13,7 +13,10 @@ Este lenguaje posee una estructura esta enfocada a los circuitos de la maquina e
 Sin embargo, nos permite utilizar la totalidad de recursos que ofrece un computador, con los que se obtienen programas muy eficientes en tiempo de ejecucion y en
 ocupacion de la memoria.
 
-Fuentes:
+# RESULTADOS OBTENIDOS
+Se puedieron resolver satisfactoriamente cada uno de los problemas que se presentaron en esta practica. Para el "Multiplier", se pudo evidenciar como las caracterísitcas del código escrito permitian calcular las multiplicaciones de operandos cuyo valor numérico es igual o mayor a cero; para el "Filler" se pudo evidenciar la funcionalidad de llenado de pantalla y analizar sus bases en el lenguaje de máquina. Por otro lado, para el quinto proyecto se pudo evidenciar como, a través de compuertas básicas NAND se ha podido llegar a armar una computadora de propósito general funcional. Esto es una valiosa lección de aprendizaje de lógica matemática y de programación de compuerta que nos permite ser ingenieros completos e integrales en los distintos campos que nuestra disciplina avanza.
+
+**Fuentes**
 
 - https://www.universidadviu.com/es/actualidad/nuestros-expertos/conociendo-el-lenguaje-de-maquina
 - http://cv.uoc.edu/moduls/XW02_79049_00373/web/main/m4/v2_3.html

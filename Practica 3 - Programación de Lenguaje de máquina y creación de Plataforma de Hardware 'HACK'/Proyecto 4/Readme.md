@@ -166,9 +166,6 @@ De esta forma le asignamos un color a cuando la memoria de la direccion del tecl
 
 Con esto cargamos la primera direccion de la pantalla le damos el indice actual para colorear y pintar cada pixel de negro. Lo mismo haremos cuando la pantalla tenga que ser blanca
 
-# RESULTADOS OBTENIDOS
-Se puedieron resolver satisfactoriamente cada uno de los problemas que se presentaron en esta practica. Para el "Multiplier", se pudo evidenciar como las caracterísitcas del código escrito permitian calcular las multiplicaciones de operandos cuyo valor numérico es igual o mayor a cero; para el "Filler" se pudo evidenciar la funcionalidad de llenado de pantalla y analizar sus bases en el lenguaje de máquina. Por otro lado, para el quinto proyecto se pudo evidenciar como, a través de compuertas básicas NAND se ha podido llegar a armar una computadora de propósito general funcional. Esto es una valiosa lección de aprendizaje de lógica matemática y de programación de compuerta que nos permite ser ingenieros completos e integrales en los distintos campos que nuestra disciplina avanza.
-
 **Fuentes:**
 - https://www.nand2tetris.org/project05
 - https://www.nand2tetris.org/project04
