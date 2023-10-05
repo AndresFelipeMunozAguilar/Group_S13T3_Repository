@@ -85,6 +85,41 @@ Ahora si se puede realizar el ALU entre RegisterD y SelectAorM (resultado del mu
     out=ALUOutput, out=outM, zr=Zero, ng=Negative);
 ```
 
+```
+Or(a=Zero, b=Negative, out=NotPositive);
+```
+
+Realiza una operación OR lógica entre las señales Zero y Negative y almacena el resultado en NotPositive, 
+esto se realiza para determinar si se debe realizar un salto condicional (jump) en función de las condiciones de estado de la ALU
+
+```
+And(a=instruction[0], b=Positive, out=JCode1);
+And(a=instruction[1], b=Zero, out=JCode2);
+And(a=instruction[2], b=Negative, out=JCode3);
+```
+
+ JCode1, JCode2 y JCode3 son líneas que generan señales de control para determinar las condiciones de salto (jump) basadas en ciertos bits de la instrucción.
+
+```
+Or8Way(in[0]=JCode1, in[1]=JCode2, in[2]=JCode3, in[3..7]=false, out=JMPCode);
+```
+
+Realiza una operación Or8Way entre las señales anteriormente indicadas para determinar si debe realizarse un salto 
+
+```
+Mux(a=false, b=JMPCode, sel=instruction[15], out=loadPC);
+```
+
+Luego se usa un multiplexor para decidir si se debe cargar una nueva dirección de programa (PC) en función de la señal JMPCode enviada por el Or8Way 
+y del tipo de instrucción.
+
+```
+PC(in=RegisterA, load=loadPC, inc=true, reset=reset, out[0..14]=pc);
+```
+
+La dirección se actualiza en función de varios factores, como la señal de carga en nuestro caso loadPC  y la señal de incremento (inc), y puede restablecerse reset según sea necesario,
+Ademas de configurar un contador de programa (PC) que almacena la dirección de la próxima instrucción a ejecutar.
+
 ![image](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/104959341/26e944b7-0b6e-44fb-bdab-e737d9ea6aec)
 
 >COMPUTER<br>
