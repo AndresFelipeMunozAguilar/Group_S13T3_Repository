@@ -70,8 +70,20 @@ Según el diagrama sigue ALU sin embargo antes del ALU toca revisar el DRegister
  Mux(a=false, b=instruction[4], sel=instruction[15], out=loadD);
  DRegister(in=ALUOutput, load=loadD, out=RegisterD);
 ```
+Finalmente antes de si realizar el ALU viene el writeM, ¿deberiamos escribir en M?, esto se realiza con un mux usando las instruction.
 
-Ahora
+```
+    Mux(a=false, b=instruction[3], sel=instruction[15], out=writeM);
+```
+
+Ahora si se puede realizar el ALU entre RegisterD y SelectAorM (resultado del mux entre RegisterA e inM).
+
+```
+    ALU(x=RegisterD, y=SelectAorM, 
+    zx=instruction[11], nx=instruction[10], zy=instruction[9], 
+    ny=instruction[8], f=instruction[7], no=instruction[6], 
+    out=ALUOutput, out=outM, zr=Zero, ng=Negative);
+```
 
 ![image](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/104959341/26e944b7-0b6e-44fb-bdab-e737d9ea6aec)
 
