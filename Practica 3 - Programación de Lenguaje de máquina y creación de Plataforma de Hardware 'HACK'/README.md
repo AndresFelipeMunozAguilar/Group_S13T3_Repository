@@ -6,7 +6,7 @@ En el caso de estos dos proyectos (Proyecto No.4 y Proyecto No. 5), exploramos l
 
 # ¿Por qué el lenguaje de máquina es importante para definir la arquitectura computacional?
 
-El lenguaje de maquina que pueden ejecutar las computadoras y cualquier otro sistema computacional, y tiene una importante dentro de la arquitectura de estos
+El lenguaje de maquina que pueden ejecutar las computadoras y cualquier otro sistema computacional, y tiene una gran importancia dentro de la arquitectura de estos
 sistemas ya que reune las instrucciones que recibe la maquina para llevar a cabo procesos para los que ha sido programada.
 
 Este lenguaje posee una estructura esta enfocada a los circuitos de la maquina e incomprensible a la expresion del ser humano, por lo que su programacion es compleja.

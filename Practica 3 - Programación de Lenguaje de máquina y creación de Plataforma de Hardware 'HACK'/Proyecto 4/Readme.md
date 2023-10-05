@@ -165,3 +165,7 @@ De esta forma le asignamos un color a cuando la memoria de la direccion del tecl
 ```
 
 Con esto cargamos la primera direccion de la pantalla le damos el indice actual para colorear y pintar cada pixel de negro. Lo mismo haremos cuando la pantalla tenga que ser blanca
+
+**Fuentes:**
+- https://www.nand2tetris.org/project05
+- https://www.nand2tetris.org/project04
