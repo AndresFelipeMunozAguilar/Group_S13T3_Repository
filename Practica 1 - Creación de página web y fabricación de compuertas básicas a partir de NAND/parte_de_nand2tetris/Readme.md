@@ -1,6 +1,9 @@
 Este readme pertenece a la práctica No. 1 del curso de "nand2tetris", la cual nos pide hacer un conjunto amplio de compuertas lógicas a partir de la compuerta lógica "NAND" o "AND NOT". El siguiente texto describe de que
 manera cada uno de los participantes del grupo S13T3 realizó la lógica de su compuerta correspondiente:
 
+# INTRODUCCIÓN
+En este proyecto, analizamos los fundamentos de la arquitectura de una computadora, donde los componentes más básicos juegan un papel esencial. En el primer proyecto del curso  "nand2tetris", nos sumergimos en la construcción de las compuertas lógicas más elementales, como And, Or, y Mux, junto con sus versiones de 16 bits, And16, Or16, Mux16, y otras. Estas compuertas forman los bloques de construcción esenciales desde los cuales posteriormente ensamblaremos la CPU y la RAM de la computadora. Aquí, nos familiarizamos con la lógica fundamental y aprendemos a construir compuertas a partir de la compuerta primitiva Nand. Cada compuerta que creamos es un paso crucial hacia la construcción de una computadora completamente funcional.
+
 Andrés Felipe Muñoz Aguilar
 
 - NOT: Primero tomé la propiedad del algebra booleana que dice: A = A + A; entonces, vamos a ver si con "~A" (A negado) se cumple esta condición: 
