@@ -1,3 +1,6 @@
+![image](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/104959341/fc8794e5-980a-4d2d-b07d-0fbd5f382bb0)
+>CPU<br>
+La imagen fue extraída de la lectura del capitulo 5 del pdf de NAND2TETRIS. Esta imagen sirvio tanto para un mejor entendimiento del funcionamiento interno y como guía para la construcción de la CPU. 
 ![image](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/104959341/26e944b7-0b6e-44fb-bdab-e737d9ea6aec)
 
 >COMPUTER<br>
