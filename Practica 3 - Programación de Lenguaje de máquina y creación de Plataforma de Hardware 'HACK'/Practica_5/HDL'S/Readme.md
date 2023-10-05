@@ -28,11 +28,19 @@ Finalmente ahora tenemos que trabajar con la parte de la memoria, para esto llam
 ```
 > MEMORY<br>
 
-![memory](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/98712631/b4c3585a-fc8e-435a-846d-6c5538575427)
+![memory](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/98712631/501a4a9c-bc0c-4d04-a1eb-99279b95749e)
 
 Se inicia la implementacion de la memoria con la siguiente linea de codigo
 
 ```
-    Memory(in=outM, load=writeM, address=addressM, out=mData);
+DMux(in=load, sel=address[14], a=loadR, b=loadS);
+```
+
+Se toma un demultiplexor (DMux). El cual Toma una señal de entrada load y una señal de selección address[14] y dirige la señal de entrada a uno de los dos caminos, loadR esta para cargar los datos en la RAM16K o loadS para cargar datos en la Screen.
 
 ```
+RAM16K(in=in, load=loadR, address=address[0..13], out=ROut)
+```
+
+Aquí se configura el acceso a una memoria RAM de 16K palabras. La señal de entrada se proporciona como in, la señal de carga se controla mediante loadR recibida del Demux anterios, y la dirección de memoria se determina a través de address[0..13]. Los datos leídos se envian a la salida como ROut.
+
