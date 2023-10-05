@@ -44,3 +44,11 @@ RAM16K(in=in, load=loadR, address=address[0..13], out=ROut)
 
 Aquí se configura el acceso a una memoria RAM de 16K palabras. La señal de entrada se proporciona como in, la señal de carga se controla mediante loadR recibida del Demux anterios, y la dirección de memoria se determina a través de address[0..13]. Los datos leídos se envian a la salida como ROut.
 
+```
+Screen(in=in, load=loadS, address=address[0..12], out=SOut)
+```
+
+El acceso a una pantalla de visualización lo indica esta linea de codigo. 
+La señal de entrada se proporciona como in, la señal de carga se controla mediante loadS de la misma forma esta es intervenida por el Dmux inicial
+y la dirección de la pantalla se determina a través de address[0..12]. Los datos de la pantalla se extraen como SOut.
+
