@@ -36,8 +36,43 @@ Para finalizar el proceso se realiza una operación de multiplexación de 4 vía
 
 
 ![image](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/104959341/fc8794e5-980a-4d2d-b07d-0fbd5f382bb0)
->CPU<br>
-La imagen fue extraída de la lectura del capitulo 5 del pdf de NAND2TETRIS. Esta imagen sirvio tanto para un mejor entendimiento del funcionamiento interno y como guía para la construcción de la CPU. 
+>CPU
+<br>
+
+La imagen fue extraída de la lectura del capitulo 5 del pdf de NAND2TETRIS. Esta imagen sirvio tanto para un mejor entendimiento del funcionamiento interno y como guía para la construcción de la CPU.
+
+De entrada, la instrucción va junto al ALUOutput a un Mux16 donde el selector tambien sera la instruction. A la salida se le nombro InputForA.
+
+```
+ Mux16(a=instruction, b=ALUOutput, sel=instruction[15], out=InputForA);
+```
+
+Según la imagen lo siguiente sería el ARegister, pero el ARegister  necesita un load, este load es el resultado de hacer Mux entre 1 (true) y la instruction tomando también instruction como selector. A la salida le llamamos loadA.
+
+```
+ Mux(a=true, b=instruction[5], sel=instruction[15], out=loadA);
+```
+Ahora simplemente sigue el RegisterA que me devuelve el AddressM. 
+
+```
+ ARegister(in=InputForA, load=loadA, out=RegisterA, out[0..14]=addressM);
+```
+
+Continuando ahora sería realizar un Mux16 entre el inM[16] y RegisterA tomando instruction de nuevo como el selector.
+
+```
+ Mux16(a=RegisterA, b=inM, sel=instruction[12], out=SelectAorM);
+```
+
+Según el diagrama sigue ALU sin embargo antes del ALU toca revisar el DRegister, así que el proceso es el mismo que con ARegister, lo que cambia es que ahora la entrada sera la ALUOutput. Antes de este va un Mux que se encarga de determinar si DRegister debe cargarse, solo que a diferencia del ARegister aquí usamos false.
+
+```
+ Mux(a=false, b=instruction[4], sel=instruction[15], out=loadD);
+ DRegister(in=ALUOutput, load=loadD, out=RegisterD);
+```
+
+Ahora
+
 ![image](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/104959341/26e944b7-0b6e-44fb-bdab-e737d9ea6aec)
 
 >COMPUTER<br>
