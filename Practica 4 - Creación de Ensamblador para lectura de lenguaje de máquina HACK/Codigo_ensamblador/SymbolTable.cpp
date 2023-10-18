@@ -5,7 +5,7 @@ SymbolTable::SymbolTable()
     table.clear();
 
 
-    /* Inicalizar símbolos predefinidos */
+    /* Inicalizar los símbolos predefinidos */
     table.insert(pair<string, uint16_t>("SP", 0));
     table.insert(pair<string, uint16_t>("LCL", 1));
     table.insert(pair<string, uint16_t>("ARG", 2));
@@ -13,7 +13,7 @@ SymbolTable::SymbolTable()
     table.insert(pair<string, uint16_t>("THAT", 4));
 
 
-    /*Los registros del R0 ~ R15. */
+    /*Incluyendo los registros del R0 ~ R15. */
     table.insert(pair<string, uint16_t>("RO", 0));
     table.insert(pair<string, uint16_t>("R1", 1));
     table.insert(pair<string, uint16_t>("R2", 2));
