@@ -10,7 +10,7 @@ using namespace std;
 class SymbolTable {
     
     /* the symbol table storage space. */
-    private:
+    public:
         map<string, uint16_t> table; 
         int VariableCounter;
         int LabelCounter;
