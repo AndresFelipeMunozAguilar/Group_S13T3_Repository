@@ -89,7 +89,7 @@ void SymbolTable::addLabel(string Label)
 void SymbolTable::addVariable(string Var) 
 {
 
-    if(table.find(Var) != table.end()) //en caso de que la variable 
+    if(table.find(Var) == table.end()) //en caso de que la variable 
     {                                  //no esté en el mapa, la inserta
     
         table.insert(pair<string, uint16_t>(Var, VariableCounter));
