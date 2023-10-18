@@ -4,7 +4,7 @@ SymbolTable::SymbolTable()
 {
     table.clear();
 
-  //dfgdf
+
     /* Inicalizar símbolos predefinidos */
     table.insert(pair<string, uint16_t>("SP", 0));
     table.insert(pair<string, uint16_t>("LCL", 1));
