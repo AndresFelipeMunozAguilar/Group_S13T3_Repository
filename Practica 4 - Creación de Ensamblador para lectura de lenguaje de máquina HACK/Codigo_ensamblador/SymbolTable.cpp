@@ -2,6 +2,7 @@
 
 SymbolTable::SymbolTable()
 {
+
     table.clear();
 
 
@@ -42,4 +43,24 @@ SymbolTable::SymbolTable()
      encuentra, empezando en la dirección de 
      memoria #16: */
     VariableCounter = 16;
+
 }
+
+
+/*Creamos el destructor de la tabla*/
+SymbolTable::~SymbolTable()
+{
+
+    table.clear(); //simplemente borras todo lo que esté adentro de la tabla
+
+}
+
+
+int SymbolTable::incLabelCounter()
+{
+
+    return (LabelCounter++); //aumentamos en una unidad el contador de etiqeutas
+
+}
+
+
