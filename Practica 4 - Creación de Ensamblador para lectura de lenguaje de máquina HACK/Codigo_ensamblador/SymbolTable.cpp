@@ -64,3 +64,37 @@ int SymbolTable::incLabelCounter()
 }
 
 
+void SymbolTable::addLabel(string Label)
+{
+    if (table.find(Label) != table.end())
+    {
+    
+        throw runtime_error("Usted esta intentando redefinir una variable desde la funcion addLabel");
+
+    } 
+    else 
+    {
+
+        table.insert(pair<string, uint16_t> (Label, LabelCounter));
+
+    }
+    
+}
+
+
+void SymbolTable::addVariable(string Var) 
+{
+
+    if(table.find(Var) != table.end()) //en caso de que la variable no esté en el mapa, la inserta
+    {
+
+        table.insert(pair<string, uint16_t>(Var, VariableCounter));
+        VariableCounter++;
+        
+    }
+
+    //De otra forma, sólo saltese el condicional
+
+}
+
+
