@@ -66,7 +66,10 @@ int SymbolTable::incLabelCounter()
 
 void SymbolTable::addLabel(string Label)
 {
-    if (table.find(Label) != table.end())
+
+    /* Si la variable ya existe, lanza un error,
+    de otra forma, la inserta al mapa*/
+    if (table.find(Label) != table.end()) 
     {
     
         throw runtime_error("Usted esta intentando redefinir una variable desde la funcion addLabel");
@@ -85,9 +88,9 @@ void SymbolTable::addLabel(string Label)
 void SymbolTable::addVariable(string Var) 
 {
 
-    if(table.find(Var) != table.end()) //en caso de que la variable no esté en el mapa, la inserta
-    {
-
+    if(table.find(Var) != table.end()) //en caso de que la variable 
+    {                                  //no esté en el mapa, la inserta
+    
         table.insert(pair<string, uint16_t>(Var, VariableCounter));
         VariableCounter++;
         
@@ -98,3 +101,14 @@ void SymbolTable::addVariable(string Var)
 }
 
 
+uint16_t SymbolTable::lookupSymbol(string Var)
+{
+
+    addVariable(Var); //Añade la variable nueva o, si ya existe, no hace nada
+    
+    return (table.find(Var)->second); //busca la variable cuyo nombre sea igual
+                                      //al valor de "Var" y y retorna la segunda
+                                      //columna del mapa correspondiente a la 
+                                      //dirección de memoria de esta variable
+
+}
