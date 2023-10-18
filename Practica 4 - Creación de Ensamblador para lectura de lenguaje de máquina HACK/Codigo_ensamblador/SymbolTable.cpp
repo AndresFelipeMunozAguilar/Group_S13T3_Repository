@@ -1,5 +1,6 @@
 #include "SymbolTable.hpp"
 
+
 SymbolTable::SymbolTable()
 {
 
@@ -19,7 +20,7 @@ SymbolTable::SymbolTable()
     table.insert(pair<string, uint16_t>("R1", 1));
     table.insert(pair<string, uint16_t>("R2", 2));
     table.insert(pair<string, uint16_t>("R3", 3));
-    table.insert(pair<string, uint16_t>("R4",-4));
+    table.insert(pair<string, uint16_t>("R4", 4));
     table.insert(pair<string, uint16_t>("R5", 5));
     table.insert(pair<string, uint16_t>("R6", 6));
     table.insert(pair<string, uint16_t>("R7", 7));

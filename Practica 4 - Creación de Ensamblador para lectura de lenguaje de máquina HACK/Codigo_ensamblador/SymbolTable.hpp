@@ -10,7 +10,7 @@ using namespace std;
 class SymbolTable {
     
     /* the symbol table storage space. */
-    public:
+    public: //cmabiar a private
         map<string, uint16_t> table; 
         int VariableCounter;
         int LabelCounter;
@@ -22,6 +22,7 @@ class SymbolTable {
         void addLabel(string Label); //añadir nueva label a la tabla
         void addVariable(string Var); // añadir nueva variable a la tabla
         uint16_t lookupSymbol(string Var); //retorna la dirección de memoria de cierto símbolo
+
 };
 
 #endif //SYMBOLTABLE_HPP
