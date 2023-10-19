@@ -6,9 +6,16 @@ En el emocionante recorrido que hemos tenido en Nand2Tetris hasta este momento, 
 
 # Teniendo en cuenta las características del ensamblador, ¿Cuál es la principal limitante que observan? Justifique su respuesta.
 
+La principal limitante de este ensamblador es la dependencia que tiene de la arquitectura de la máquina para la que está diseñada. Cada tipo de CPU o arquitectura de computadora tiene su propio conjunto único de instrucciones en lenguaje de máquina y, por tanto, requiere de su propio conjunto correspondiente de mnemónicos (*"Un mnemónico o nemónico es una palabra que sustituye a un código de operación, con lo cual resulta más fácil la programación"*) en el lenguaje ensamblador.
+
+Esta limitante existe gracias a que el lenguaje ensamblador está estrechamente vinculado a la arquitectura de la CPU. Si un programador quisiera escribir código en lenguaje ensamblador para una arquitectura específica, debe utilizar un conjunto de instrucciones y mnemónicos específicos para esa arquitectura. Esto significa que el código en lenguaje ensamblador escrito para una arquitectura no es directamente compatible con otra. Por ejemplo, el lenguaje ensamblador para la arquitectura x86 es muy diferente al lenguaje ensamblador para la arquitectura ARM. Así, un programa escrito en lenguaje ensamblador para una arquitectura x86 no funcionaría en una CPU ARM y viceversa.
+
+Así, esta limitante implica que los programas escritos en lenguaje ensamblador son altamente específicos para una arquitectura en particular, lo que puede complicar la portabilidad de código entre diferentes plataformas.
 
 
 # RESULTADOS OBTENIDOS
 
 
 **Fuentes**
+- Wikipedia contributors. (s/f). Mnemónico. Wikipedia, The Free Encyclopedia. https://es.wikipedia.org/w/index.php?title=Mnem%C3%B3nico&oldid=142252282
+
