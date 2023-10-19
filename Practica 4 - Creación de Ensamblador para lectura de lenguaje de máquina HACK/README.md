@@ -14,6 +14,7 @@ Así, esta limitante implica que los programas escritos en lenguaje ensamblador 
 
 
 # RESULTADOS OBTENIDOS
+Al termminar de realizar el laboratorio, se pudo programar exitosamente el software respectivo al ensamblador del projecto No. 6 del curso de Nand2tetris. Este cumple con las funcionalidades necesarias de un traductor de código ensamblador a lenguaje de máquina, permitiendo la lectura de una tabla de símbolos que administre las direcciones de memoria de las distintas etiquetas y variables del código de máquina, un "Parser" que analiza la semántica del código de máquina, de manera que acepta el código que cumpla con las normas establecidas de antemano por los creadore del curso de Nand2tetris y un    
 
 
 **Fuentes**
