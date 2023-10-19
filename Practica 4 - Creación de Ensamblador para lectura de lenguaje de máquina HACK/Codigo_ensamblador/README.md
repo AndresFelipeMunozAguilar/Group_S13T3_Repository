@@ -18,3 +18,25 @@ El proceso de construcción de un ensamblador para el lenguaje de máquina "HACK
     3. **Adición de Nueva Etiqueta:** La tabla de símbolos permite la adición de nuevas etiquetas. Sin embargo, estas se añaden solo si aún no existen en la tabla, con anterioridad.
     4. **Adición de Nueva Variable:** Similar a la función anterior, esta permite añadir nuevas variables a la tabla.
     5. **Búsqueda de Dirección de Memoria:** Finalmente, se implementa una función que facilita la búsqueda de la dirección de memoria asociada a una etiqueta o variable específica en el mapa de la tabla de símbolos.
+# Analizador
+Parser
+# Ensamblador
+
+Para el esamblador se tuvieron en cuenta los siguientes pasos
+
+-**Inclusión de librerias:** El código comienza por incluir diversas bibliotecas estándar de C++ necesarias para diferentes funcionalidades. 
+
+-**Declaración de objetos y variables:** En esta sección, se declaran objetos y variables que serán utilizados en el programa. Estos objetos incluyen SymbolTable y Parser, creadas anteriormente
+
+-**Función main:** Aquí se declaran variables como fnameIn y fnameOut para almacenar los nombres de archivo de entrada y salida, así como objetos ifstream y ofstream para abrir los archivos de entrada y salida.
+
+-**Manejo de argumentos de línea de comandos:** El programa obtiene el nombre del archivo de entrada (fnameIn) a partir del primer argumento (argv[1]), y verifica que tenga la extensión ".asm".
+
+-**Determinación del nombre del archivo de salida:** Si solo se proporciona un archivo de entrada, se genera un nombre de archivo de salida (fnameOut) al reemplazar la extensión ".asm" por ".hack". Si se proporcionan dos argumentos, el segundo argumento se toma como el nombre del archivo de salida.
+
+-**Apertura de archivos de entrada y salida:** Se abren los archivos de entrada y salida. Se imprime en la consola el nombre del archivo de salida.
+
+-**Primera pasada (First Pass):** Las etiquetas se utilizan para construir una tabla de símbolos (SymbolTable) que mapea nombres de etiquetas a direcciones de memoria. También se calcula el contador de líneas de código ensamblador.
+
+-**Segunda pasada (Second Pass):** Utiliza un objeto Parser y llama a la función parseInst para convertir cada instrucción en su equivalente en código máquina. Luego, se imprime la instrucción original junto con su representación en código máquina en la consola y se escribe en el archivo de salida.
+
