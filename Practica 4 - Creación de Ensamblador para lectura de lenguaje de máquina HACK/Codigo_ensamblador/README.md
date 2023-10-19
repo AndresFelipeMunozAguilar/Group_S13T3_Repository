@@ -45,9 +45,13 @@ Los diccionarios compDict, destDict, y jumpDict almacenan las correspondencias e
 Métodos de Consulta y Análisis:
 
 compEntry, destEntry, y jumpEntry agregan entradas a los diccionarios de instrucciones.
+
 compLookup, destLookup, y jumpLookup buscan un mnemónico en los diccionarios y devuelven su representación binaria.
+
 parseInst decide si la instrucción es de tipo A o C y llama al método correspondiente para el análisis.
+
 parseAInst maneja instrucciones de tipo A y traduce el valor a binario, ya sea un número o un símbolo.
+
 parseCInst analiza instrucciones de tipo C y divide la instrucción en sus componentes (destino, cálculo y salto) para luego traducirla a binario.
 
 # Ensamblador
