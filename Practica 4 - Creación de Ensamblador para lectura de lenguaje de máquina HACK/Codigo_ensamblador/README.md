@@ -18,8 +18,32 @@ El proceso de construcción de un ensamblador para el lenguaje de máquina "HACK
     3. **Adición de Nueva Etiqueta:** La tabla de símbolos permite la adición de nuevas etiquetas. Sin embargo, estas se añaden solo si aún no existen en la tabla, con anterioridad.
     4. **Adición de Nueva Variable:** Similar a la función anterior, esta permite añadir nuevas variables a la tabla.
     5. **Búsqueda de Dirección de Memoria:** Finalmente, se implementa una función que facilita la búsqueda de la dirección de memoria asociada a una etiqueta o variable específica en el mapa de la tabla de símbolos.
-# Analizador
-Parser
+# Parser
+
+Declaración de la clase Parser:
+La clase Parser tiene métodos y propiedades para analizar instrucciones en lenguaje ensamblador de Hack. Algunos de los métodos y propiedades más importantes son:
+
+map<string, string> compDict, destDict, y jumpDict: Estos diccionarios se utilizan para mapear mnemónicos de instrucciones a sus representaciones binarias correspondientes.
+string prefixA y prefixC: Son los prefijos para instrucciones tipo A y tipo C respectivamente.
+compEntry, destEntry, y jumpEntry: Estos métodos se utilizan para agregar entradas a los diccionarios de mapeo de instrucciones.
+compLookup, destLookup, y jumpLookup: Estos métodos buscan en los diccionarios y devuelven la representación binaria correspondiente de una instrucción.
+parseInst: Este método analiza una instrucción completa y determina si es de tipo A o C para llamar a la función de análisis correspondiente.
+parseAInst: Analiza instrucciones de tipo A, que son aquellas que comienzan con el símbolo @.
+parseCInst: Analiza instrucciones de tipo C, que son aquellas con un formato específico que incluye destinos, cálculos y saltos.
+Constructor y Destructor de Parser:
+El constructor inicializa los diccionarios compDict, destDict, y jumpDict con los mapeos predefinidos de instrucciones. El destructor limpia estos diccionarios al finalizar.
+
+Diccionarios de Instrucciones:
+Los diccionarios compDict, destDict, y jumpDict almacenan las correspondencias entre mnemónicos y sus representaciones binarias en el código de máquina de Hack.
+
+Métodos de Consulta y Análisis:
+
+compEntry, destEntry, y jumpEntry agregan entradas a los diccionarios de instrucciones.
+compLookup, destLookup, y jumpLookup buscan un mnemónico en los diccionarios y devuelven su representación binaria.
+parseInst decide si la instrucción es de tipo A o C y llama al método correspondiente para el análisis.
+parseAInst maneja instrucciones de tipo A y traduce el valor a binario, ya sea un número o un símbolo.
+parseCInst analiza instrucciones de tipo C y divide la instrucción en sus componentes (destino, cálculo y salto) para luego traducirla a binario.
+
 # Ensamblador
 
 Para el esamblador se tuvieron en cuenta los siguientes pasos
