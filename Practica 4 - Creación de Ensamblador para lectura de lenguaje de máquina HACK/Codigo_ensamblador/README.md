@@ -6,8 +6,14 @@ El proceso de construcción de un ensamblador para el lenguaje de máquina "HACK
 
 - **Paso 2: Creación de la Clase "SymbolTable":** La tabla de símbolos se materializa en forma de una clase llamada "SymbolTable." Esta clase alberga tres variables esenciales:
 
-1. Mapa de Símbolos: Se utiliza un mapa donde se relaciona cada nombre de variable o etiqueta con su espacio de memoria en formato "uint16_t".
-2. Espacio de Memoria para Variables Nuevas: Una variable se utiliza para gestionar el espacio de memoria que ocupará cada nueva variable declarada en el programa.
-3. Espacio de Memoria para Etiquetas Nuevas: Una variable separada administra el espacio de memoria que ocupará cada nueva etiqueta declarada en el programa.
+    1. **Mapa de Símbolos:** Se utiliza un mapa donde se relaciona cada nombre de variable o etiqueta con su espacio de memoria en formato "uint16_t".
+    2. **Espacio de Memoria para Variables Nuevas:** Una variable se utiliza para gestionar el espacio de memoria que ocupará cada nueva variable declarada en el programa.
+    3. **Espacio de Memoria para Etiquetas Nuevas:** Una variable separada administra el espacio de memoria que ocupará cada nueva etiqueta declarada en el programa.
 
-- **Paso 3: Implementación de Funciones Primordiales**
+- **Paso 3: Implementación de Funciones Primordiales:** La clase "SymbolTable" se complementa con funciones primordiales para su funcionamiento óptimo. Estas funciones incluyen:
+
+    1. **Constructor:** En el constructor de la clase, se inicializa el mapa de símbolos y se reservan espacios de memoria para los símbolos predefinidos del sistema. Esto incluye los registros del número 0 al número 15, así como los símbolos predefinidos en la sección "MMIO" (Memory-Mapped I/O). Además, se inicializa la variable que administra la dirección de memoria donde se almacenan nuevas variables.
+    **2. Destructor:** El destructor se encarga de liberar la memoria utilizada por una instancia de la clase "SymbolTable" una vez que ya no es necesaria. Cambio Dinámico de la Dirección de Memoria: Se implementa una función que permite cambiar dinámicamente la dirección de memoria en la que se guardarán las siguientes etiquetas o variables.
+    3.**Adición de Nueva Etiqueta:** La tabla de símbolos permite la adición de nuevas etiquetas. Sin embargo, estas se añaden solo si aún no existen en la tabla.
+    4. **Adición de Nueva Variable:** Similar a la función anterior, esta permite añadir nuevas variables a la tabla.
+    5. **Búsqueda de Dirección de Memoria:** Finalmente, se implementa una función que facilita la búsqueda de la dirección de memoria asociada a una etiqueta o variable específica en el mapa de la tabla de símbolos.
