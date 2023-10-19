@@ -6,8 +6,8 @@ El proceso de construcción de un ensamblador para el lenguaje de máquina "HACK
 
 - **Paso 2: Creación de la Clase "SymbolTable":** La tabla de símbolos se materializa en forma de una clase llamada "SymbolTable." Esta clase alberga tres variables esenciales:
 
-    1. Mapa de Símbolos: Se utiliza un mapa donde se relaciona cada nombre de variable o etiqueta con su espacio de memoria en formato "uint16_t".
-    2. Espacio de Memoria para Variables Nuevas: Una variable se utiliza para gestionar el espacio de memoria que ocupará cada nueva variable declarada en el programa.
-    3. Espacio de Memoria para Etiquetas Nuevas: Una variable separada administra el espacio de memoria que ocupará cada nueva etiqueta declarada en el programa.
+1. Mapa de Símbolos: Se utiliza un mapa donde se relaciona cada nombre de variable o etiqueta con su espacio de memoria en formato "uint16_t".
+2. Espacio de Memoria para Variables Nuevas: Una variable se utiliza para gestionar el espacio de memoria que ocupará cada nueva variable declarada en el programa.
+3. Espacio de Memoria para Etiquetas Nuevas: Una variable separada administra el espacio de memoria que ocupará cada nueva etiqueta declarada en el programa.
 
 - **Paso 3: Implementación de Funciones Primordiales**
