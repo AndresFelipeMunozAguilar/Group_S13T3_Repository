@@ -1,15 +1,11 @@
 #include "VmTranslator.h"
-
 #include "VmCommandType.h"
-
 #include "Parser.h"
-
 #include "CodeWriter.h"
-
 #include "CodeWriterOptimised.h"
 
-#include <fstream>
 
+#include <fstream>
 #include <list>
 
 
