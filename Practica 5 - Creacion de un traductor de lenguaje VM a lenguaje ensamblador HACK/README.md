@@ -33,3 +33,8 @@ El octavo proyecto, denominado "Etapa II", se centró en la ampliación y el per
 Finalmente, a lo largo de estos proyectos, se han extraído lecciones valiosas relacionadas con la traducción de código y la comprensión de lenguajes intermedios. Se ha adquirido una comprensión más profunda de las máquinas virtuales y su papel en el mundo de la informática. Estos proyectos han permitido explorar las complejidades de la traducción de programas y han destacado la importancia de abordar este proceso en dos etapas, desde lo básico hasta lo avanzado.
 
 **Fuentes**
+- Project 07. (n.d.). Nand2tetris. Retrieved November 2, 2023, from https://www.nand2tetris.org/project07
+
+- Project 08. (n.d.). Nand2tetris. Retrieved November 2, 2023, from https://www.nand2tetris.org/project08
+
+- 
