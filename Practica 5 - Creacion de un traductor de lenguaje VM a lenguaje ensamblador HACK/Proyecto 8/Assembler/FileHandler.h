@@ -1,11 +1,7 @@
 #include "FileHandler.h"
-
 #include <sys/stat.h>
-
 #include <unistd.h>
-
 #include <dirent.h>
-
 #include <iostream>
 
 
@@ -79,7 +75,6 @@ FileHandler::FileHandler(string input)
 
 
 bool FileHandler::isFile()
-
 {
 
     struct stat buf;
@@ -93,7 +88,6 @@ bool FileHandler::isFile()
 
 
 bool FileHandler::isDir()
-
 {
 
     struct stat buf;
@@ -107,7 +101,6 @@ bool FileHandler::isDir()
 
 
 string FileHandler::getOutputFile()
-
 {
 
     string in = input;
@@ -139,7 +132,6 @@ string FileHandler::getOutputFile()
 
 
 string FileHandler::getProgramName()
-
 {
 
     string progName;
@@ -187,7 +179,6 @@ string FileHandler::getProgramName()
 
 
 int FileHandler::getNumVmFiles()
-
 {
 
     return files.size();
@@ -197,7 +188,6 @@ int FileHandler::getNumVmFiles()
 
 
 bool FileHandler::isVmFile()
-
 {
 
     return input.rfind(".vm") != string::npos ? true : false;
@@ -207,7 +197,6 @@ bool FileHandler::isVmFile()
 
 
 bool FileHandler::nextVmFile(string& fileName)
-
 {
 
     if (it == files.end())
@@ -229,7 +218,6 @@ bool FileHandler::nextVmFile(string& fileName)
 
 
 bool FileHandler::isVmFile(string in) // static
-
 {
 
     return in.rfind(".vm") != string::npos ? true : false;
@@ -239,7 +227,6 @@ bool FileHandler::isVmFile(string in) // static
 
 
 bool FileHandler::isFile(string in) // static
-
 {
 
     struct stat buf;
@@ -253,7 +240,6 @@ bool FileHandler::isFile(string in) // static
 
 
 bool FileHandler::isDir(string in) // static
-
 {
 
     struct stat buf;
@@ -267,7 +253,6 @@ bool FileHandler::isDir(string in) // static
 
 
 string FileHandler::getOutputFile(string in) // static
-
 {
 
     struct stat buf;
@@ -311,7 +296,6 @@ string FileHandler::getOutputFile(string in) // static
 
 
 string FileHandler::getProgramName(string fileName) // static
-
 {
 
     fileName = removeExtension(fileName);
@@ -323,7 +307,6 @@ string FileHandler::getProgramName(string fileName) // static
 
 
 string FileHandler::removeExtension(string fileName) // static
-
 {
 
     if (fileName.rfind(".") != string::npos)
@@ -339,7 +322,6 @@ string FileHandler::removeExtension(string fileName) // static
 
 
 string FileHandler::removePath(string fileName) // static
-
 {
 
     if (fileName.back() == '/')
@@ -361,7 +343,6 @@ string FileHandler::removePath(string fileName) // static
 
 
 string FileHandler::changeExtension(string fileName, string newExtension) // static
-
 {
 
     if (fileName.rfind(".") != string::npos)
@@ -377,4 +358,3 @@ string FileHandler::changeExtension(string fileName, string newExtension) // sta
     return fileName;
 
 }
-

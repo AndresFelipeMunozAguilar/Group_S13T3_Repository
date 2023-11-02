@@ -1,15 +1,11 @@
-
-
-#include "VMCommandType.h"
-
+#include "VmTranslator.h"
+#include "VmCommandType.h"
 #include "Parser.h"
-
 #include "CodeWriter.h"
-
 #include "CodeWriterOptimised.h"
 
-#include <fstream>
 
+#include <fstream>
 #include <list>
 
 
@@ -43,7 +39,6 @@ VmTranslator::VmTranslator(string input, ostream& outputStream, bool verbose, bo
 
 
 void VmTranslator::translate()
-
 {
 
     if (verbose)
@@ -155,7 +150,6 @@ void VmTranslator::translate()
 
 
 void VmTranslator::translateNonOptimised(Parser& parser, CodeWriter* codeWriter)
-
 {
 
     while (parser.advance()) {
@@ -247,7 +241,6 @@ void VmTranslator::translateNonOptimised(Parser& parser, CodeWriter* codeWriter)
 
 
 void VmTranslator::translateOptimised(Parser& parser, CodeWriterOptimised* codeWriterOpt)
-
 {
 
     static bool globalFunctions = true;
@@ -282,13 +275,13 @@ void VmTranslator::translateOptimised(Parser& parser, CodeWriterOptimised* codeW
 
 
 
-        if (translateOptimisedSequence(parser, codeWriterOpt))
+        if ( translateOptimisedSequence(parser, codeWriterOpt) )
 
             continue;
 
 
 
-        switch (parser.commandType()) {
+        switch ( parser.commandType() ) {
 
 
 
@@ -381,16 +374,15 @@ void VmTranslator::translateOptimised(Parser& parser, CodeWriterOptimised* codeW
 
 
 bool VmTranslator::translateOptimisedSequence(Parser& parser, CodeWriterOptimised* codeWriterOpt)
-
 {
 
     if (vmCmdList.size() >= 3) {
 
-        if (vmCmdList.at(0) == VmCommandOptType::C_PUSH_CONSTANT &&
+        if ((vmCmdList.at(0) == VmCommandOptType::C_PUSH_CONSTANT) &&
 
-            vmCmdList.at(1) == VmCommandOptType::C_PUSH_LOCAL &&
+            (vmCmdList.at(1) == VmCommandOptType::C_PUSH_LOCAL) &&
 
-            vmCmdList.at(2) == VmCommandOptType::C_ARITHMETIC_ADD)
+            (vmCmdList.at(2) == VmCommandOptType::C_ARITHMETIC_ADD))
 
             {
 
@@ -419,10 +411,7 @@ bool VmTranslator::translateOptimisedSequence(Parser& parser, CodeWriterOptimise
     if (vmCmdList.size() >= 2) {
 
 
-
-        if (vmCmdList.at(0) == VmCommandOptType::C_PUSH_CONSTANT &&
-
-            vmCmdList.at(1) == VmCommandOptType::C_ARITHMETIC_ADD)
+        if ((vmCmdList.at(0) == VmCommandOptType::C_PUSH_CONSTANT) && (vmCmdList.at(1) == VmCommandOptType::C_ARITHMETIC_ADD))
 
             {
 
@@ -456,9 +445,7 @@ bool VmTranslator::translateOptimisedSequence(Parser& parser, CodeWriterOptimise
 
 
 
-        if (vmCmdList.at(0) == VmCommandOptType::C_PUSH_CONSTANT &&
-
-            vmCmdList.at(1) == VmCommandOptType::C_ARITHMETIC_NEG)
+        if ((vmCmdList.at(0) == VmCommandOptType::C_PUSH_CONSTANT) && (vmCmdList.at(1) == VmCommandOptType::C_ARITHMETIC_NEG))
 
             {
 
@@ -474,15 +461,15 @@ bool VmTranslator::translateOptimisedSequence(Parser& parser, CodeWriterOptimise
 
 
 
-        if ((vmCmdList.at(0) == VmCommandOptType::C_PUSH_ARGUMENT ||
+        if (((vmCmdList.at(0) == VmCommandOptType::C_PUSH_ARGUMENT) ||
 
-             vmCmdList.at(0) == VmCommandOptType::C_PUSH_LOCAL ||
+             (vmCmdList.at(0) == VmCommandOptType::C_PUSH_LOCAL) ||
 
-             vmCmdList.at(0) == VmCommandOptType::C_PUSH_THIS ||
+             (vmCmdList.at(0) == VmCommandOptType::C_PUSH_THIS) ||
 
-             vmCmdList.at(0) == VmCommandOptType::C_PUSH_THAT) &&
+             (vmCmdList.at(0) == VmCommandOptType::C_PUSH_THAT)) &&
 
-             vmCmdList.at(1) == VmCommandOptType::C_ARITHMETIC_ADD)
+             (vmCmdList.at(1) == VmCommandOptType::C_ARITHMETIC_ADD))
 
             {
 
@@ -498,15 +485,15 @@ bool VmTranslator::translateOptimisedSequence(Parser& parser, CodeWriterOptimise
 
 
 
-        if ((vmCmdList.at(0) == VmCommandOptType::C_PUSH_ARGUMENT ||
+        if (((vmCmdList.at(0) == VmCommandOptType::C_PUSH_ARGUMENT) ||
 
-             vmCmdList.at(0) == VmCommandOptType::C_PUSH_LOCAL ||
+             (vmCmdList.at(0) == VmCommandOptType::C_PUSH_LOCAL) ||
 
-             vmCmdList.at(0) == VmCommandOptType::C_PUSH_THIS ||
+             (vmCmdList.at(0) == VmCommandOptType::C_PUSH_THIS) ||
 
-             vmCmdList.at(0) == VmCommandOptType::C_PUSH_THAT) &&
+             (vmCmdList.at(0) == VmCommandOptType::C_PUSH_THAT)) &&
 
-             vmCmdList.at(1) == VmCommandOptType::C_ARITHMETIC_SUB)
+             (vmCmdList.at(1) == VmCommandOptType::C_ARITHMETIC_SUB))
 
             {
 
@@ -522,9 +509,7 @@ bool VmTranslator::translateOptimisedSequence(Parser& parser, CodeWriterOptimise
 
 
 
-        if (vmCmdList.at(0) == VmCommandOptType::C_PUSH_TEMP &&
-
-            vmCmdList.at(1) == VmCommandOptType::C_POP_THAT)
+        if ( (vmCmdList.at(0) == VmCommandOptType::C_PUSH_TEMP) && (vmCmdList.at(1) == VmCommandOptType::C_POP_THAT) )
 
             {
 
@@ -600,8 +585,10 @@ bool VmTranslator::translateOptimisedSequence(Parser& parser, CodeWriterOptimise
 
 }
 
-void VmTranslator::printHeader()
 
+
+
+void VmTranslator::printHeader()
 {
 
     cout << vmTransTitle << " - " << vmTransSubtitle << " v" << vmTransVersion << endl;

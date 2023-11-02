@@ -1,7 +1,6 @@
 #include "Parser.h"
 
 #include <sstream>
-
 #include <iostream>
 
 
@@ -19,7 +18,6 @@ Parser::Parser(istream& inputStream)
 
 
 string Parser::getCommand()
-
 {
 
     return command;
@@ -29,7 +27,6 @@ string Parser::getCommand()
 
 
 string Parser::getLine()
-
 {
 
     return currentLine;
@@ -39,7 +36,6 @@ string Parser::getLine()
 
 
 int Parser::getLinePos()
-
 {
 
     return linePos;
@@ -49,7 +45,6 @@ int Parser::getLinePos()
 
 
 bool Parser::advance()
-
 {
 
     while (nextValidLine()) {
@@ -69,7 +64,6 @@ bool Parser::advance()
 
 
 VmCommandType Parser::commandType()
-
 {
 
     return commandType(cmdVector.front());
@@ -79,7 +73,6 @@ VmCommandType Parser::commandType()
 
 
 VmCommandType Parser::commandType(string cmd)
-
 {
 
     if (cmd == "push")     return VmCommandType::C_PUSH;
@@ -107,7 +100,6 @@ VmCommandType Parser::commandType(string cmd)
 
 
 VmCommandOptType Parser::commandOptType()
-
 {
 
     switch (commandType()) {
@@ -223,7 +215,6 @@ VmCommandOptType Parser::commandOptType()
 
 
 string Parser::arg1()
-
 {
 
     if (commandType() == VmCommandType::C_ARITHMETIC)
@@ -239,7 +230,6 @@ string Parser::arg1()
 
 
 int Parser::arg2()
-
 {
 
     return stoi(cmdVector.at(2));
@@ -249,7 +239,6 @@ int Parser::arg2()
 
 
 void Parser::reset()
-
 {
 
     inputStream.clear();
@@ -263,7 +252,6 @@ void Parser::reset()
 
 
 bool Parser::readNextLine()
-
 {
 
     if (getline(inputStream, currentLine)) {
@@ -283,7 +271,6 @@ bool Parser::readNextLine()
 
 
 bool Parser::nextValidLine()
-
 {
 
     while (true) {
@@ -313,7 +300,6 @@ bool Parser::nextValidLine()
 
 
 void Parser::getTokensFromLine()
-
 {
 
     cmdVector.clear();
@@ -375,7 +361,6 @@ void Parser::getTokensFromLine()
 
 
 void Parser::trimLine()
-
 {
 
     currentLine.erase(0, currentLine.find_first_not_of(' '));   //prefixing spaces
@@ -391,7 +376,6 @@ void Parser::trimLine()
 
 
 void Parser::clearCommentsFromLine()
-
 {
 
     if (currentLine.find("//") != string::npos)
@@ -399,4 +383,3 @@ void Parser::clearCommentsFromLine()
         currentLine.erase(currentLine.find("//"));
 
 }
-

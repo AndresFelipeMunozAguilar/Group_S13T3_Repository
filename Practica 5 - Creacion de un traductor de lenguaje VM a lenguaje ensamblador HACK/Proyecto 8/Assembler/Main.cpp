@@ -1,19 +1,12 @@
 #include <iostream>
-
 #include <string>
-
 #include <unistd.h>
-
 #include <fstream>
-
-#include "VMTranslator.h"
-
+#include "VmTranslator.h"
 #include "FileHandler.h"
 
 
-
 using namespace std;
-
 
 
 int main(int argc, char** argv)
@@ -21,22 +14,17 @@ int main(int argc, char** argv)
 {
 
     bool verbose = false;
-
     bool bootstrap = true;
-
     bool comments = true;
-
     bool optimise = true;
-
-
 
     string input("OS_0/");
 
 
+    if ( (!FileHandler::isFile(input)) && (!FileHandler::isDir(input)) ) 
+    {
 
-    if (!FileHandler::isFile(input) && !FileHandler::isDir(input)) {
-
-        cerr << "error: invalid input \"" << input << "\"" << endl;
+        cerr << "error: entrada invalida \"" << input << "\"" << endl;
 
         return 1;
 
@@ -44,13 +32,14 @@ int main(int argc, char** argv)
 
 
 
-    string outputFileName(FileHandler::getOutputFile(input));
+    string outputFileName( FileHandler::getOutputFile(input) );
 
-    ofstream outputFile(outputFileName);
+    ofstream outputFile( outputFileName );
 
 
 
-    if (!outputFile.good()) {
+    if ( !outputFile.good() ) 
+    {
 
         cerr << "error: unable to open file \"" << outputFileName << "\"" << endl;
 
@@ -65,7 +54,6 @@ int main(int argc, char** argv)
     vmTranslator.translate();
 
     outputFile.close();
-
 
 
     return 0;
