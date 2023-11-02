@@ -36,5 +36,3 @@ Finalmente, a lo largo de estos proyectos, se han extraído lecciones valiosas r
 - Project 07. (n.d.). Nand2tetris. Retrieved November 2, 2023, from https://www.nand2tetris.org/project07
 
 - Project 08. (n.d.). Nand2tetris. Retrieved November 2, 2023, from https://www.nand2tetris.org/project08
-
-- 
