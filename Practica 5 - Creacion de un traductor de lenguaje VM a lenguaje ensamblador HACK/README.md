@@ -24,6 +24,12 @@ En cuanto a la virtualización de aplicaciones y el empaquetamiento de software,
 En conclusión, el futuro de las máquinas virtuales abarca una amplia gama de aplicaciones, desde la virtualización de servidores hasta el desarrollo de software y la seguridad informática. Su capacidad para ofrecer entornos aislados, flexibilidad y eficiencia continúa impulsando su adopción en la industria y la comunidad de desarrollo. A medida que la tecnología avanza, es probable que las máquinas virtuales sigan desempeñando un papel esencial en la informática moderna.
 
 # RESULTADOS OBTENIDOS
+Los resultados de los laboratorios en cuestión han demostrado ser exitosos en la consecución de sus objetivos, permitiendo la realización de las tareas propuestas con un alto grado de completitud. Durante la ejecución de estos proyectos, se ha logrado desarrollar un traductor de máquina virtual (VM) que realiza la conversión de programas escritos en el lenguaje VM a programas en el lenguaje de máquina Hack. Este logro ha sentado las bases para la comprensión y la implementación de un proceso de traducción fundamental en el campo de la programación y la informática.
 
+En el septimo proyecto, se puso el foco en la implementación de las operaciones de aritmética de pila y el acceso a la memoria del lenguaje VM. El traductor básico logró abordar con éxito estas tareas esenciales, sentando las bases para un traductor VM de mayor envergadura en el proyecto siguiente.
+
+El octavo proyecto, denominado "Etapa II", se centró en la ampliación y el perfeccionamiento del traductor VM, abordando la complejidad de las instrucciones de control de flujo y las llamadas a funciones del lenguaje VM. El resultado exitoso de esta etapa demostró la capacidad de manejar una variedad más amplia de programas VM, lo que contribuye significativamente al dominio de la traducción de programas intermedios a un nivel más bajo.
+
+Finalmente, a lo largo de estos proyectos, se han extraído lecciones valiosas relacionadas con la traducción de código y la comprensión de lenguajes intermedios. Se ha adquirido una comprensión más profunda de las máquinas virtuales y su papel en el mundo de la informática. Estos proyectos han permitido explorar las complejidades de la traducción de programas y han destacado la importancia de abordar este proceso en dos etapas, desde lo básico hasta lo avanzado.
 
 **Fuentes**
