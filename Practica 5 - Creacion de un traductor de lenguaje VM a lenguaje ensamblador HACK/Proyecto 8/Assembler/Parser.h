@@ -4,12 +4,9 @@
 #include <iostream>
 
 
-
 Parser::Parser(istream& inputStream)
 
-    : inputStream(inputStream),
-
-      linePos(0)
+    : inputStream(inputStream), linePos(0)
 
 {
 
@@ -47,7 +44,8 @@ int Parser::getLinePos()
 bool Parser::advance()
 {
 
-    while (nextValidLine()) {
+    while (nextValidLine())
+    {
 
         getTokensFromLine();
 
