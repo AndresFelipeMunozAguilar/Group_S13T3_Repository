@@ -4,9 +4,13 @@ Para la explicación de como se realizó cada uno de los respectivos proyectos d
 # INTRODUCCIÓN
 
 
-# Teniendo en cuenta el marco de estas dos prácticas que son las máquinas virtuales. ¿Cuál cree que es el futuro de las máquinas virtuales?
+# Desarrolle más el concepto de lenguaje de alto nivel, teniendo en cuenta la diferencia entre lenguajes de programación propiamente dichos e interpretadores.
+
+
+# ¿Qué se debe considerar para proponer un nuevo y buen lenguaje de programación, teniendo en cuenta la arquitectura de computador completa?
 
 
 # RESULTADOS OBTENIDOS
+
 
 **Fuentes**
