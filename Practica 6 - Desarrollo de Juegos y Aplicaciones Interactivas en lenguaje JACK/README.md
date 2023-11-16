@@ -42,5 +42,195 @@ Proponer un nuevo y efectivo lenguaje de programación, considerando la arquitec
 
 # RESULTADOS OBTENIDOS
 
+**Clase Fruit**
 
-**Fuentes**
+La clase `Fruit` gestiona la vida y la representación visual de una fruta en un entorno de juego, con métodos para colocarla aleatoriamente, obtener sus coordenadas y liberar memoria cuando sea necesario.
+
+**Campos:**
+
+- `x`, `y`: Coordenadas de la fruta.
+- `size`: Tamaño de la fruta.
+
+**Constructor:**
+- Inicializa la fruta con posiciones y tamaño dados.
+- Llama al método `draw()` para mostrar la fruta.
+
+**Métodos:**
+
+- `getX()` y `getY()`: Devuelven las coordenadas de la fruta.
+- `place()`: Coloca la fruta en una nueva ubicación aleatoria, evitando superposiciones.
+- `draw()`: Dibuja visualmente la fruta en la pantalla.
+- `dispose()`: Libera la memoria asignada para la instancia de la fruta.
+
+**Clase List**
+
+La clase `List` representa una lista enlazada con métodos para manipular datos y liberar memoria.
+
+**Campos:**
+- `x`, `y`: Datos de la lista.
+- `next`: Referencia al siguiente elemento.
+
+**Constructor:**
+- Inicializa la lista con datos (`Ax` y `Ay`).
+- Retorna la instancia de la lista.
+
+**Métodos:**
+- `getX()` y `getY()`: Devuelven los datos de la lista.
+- `getNext()`: Devuelve la referencia al siguiente elemento.
+- `setNext(List n)`: Establece la referencia al siguiente elemento.
+- `dispose()`: Libera la memoria de la lista de manera recursiva, incluyendo los elementos siguientes. Utiliza la rutina del sistema operativo para reciclar el objeto.
+
+**Clase Queue**
+
+La clase `Queue` representa una estructura de cola con métodos para manipular sus elementos.
+
+**Campos:**
+- `size`: Número de elementos en la cola.
+- `tail`: Mantiene un seguimiento del último elemento.
+- `head`: Referencia al primer elemento.
+
+**Constructor:**
+- Inicializa la cola con un elemento dado (`x` e `y`).
+- Retorna la instancia de la cola.
+
+**Métodos:**
+- `size()`: Devuelve el tamaño actual de la cola.
+- `push(int x, int y)`: Añade un nuevo elemento al final de la cola.
+- `pop()`: Elimina y devuelve el elemento al frente de la cola.
+- `contains(int x, int y)`: Busca si un conjunto de datos está presente en la cola.
+- `dispose()`: Libera la memoria de la cola, incluyendo sus elementos. Utiliza la rutina del sistema operativo para reciclar el objeto.
+
+**Clase RandSeed**
+
+La clase `RandSeed` proporciona una función para obtener una semilla de generador de números aleatorios a partir de la entrada del teclado.
+
+**Método:**
+- `getSeed()`: Solicita al usuario que presione una tecla para iniciar.
+  - Inicializa las variables `seed` y `key` en cero.
+  - Mientras se mantenga presionada una tecla, incrementa la semilla y verifica si alcanza su valor máximo.
+  - Si se alcanza el valor máximo, reinicia la semilla.
+  - Utiliza la entrada del teclado para actualizar la variable `key`.
+  - Limpia la pantalla después de recibir la entrada.
+  - Retorna la semilla generada.
+
+**Clase Random**
+
+La clase `Random` implementa un generador de números pseudoaleatorios (PRNG) con métodos para generar números aleatorios y establecer semillas.
+
+**Campos:**
+- `seed`: Semilla del generador.
+- `x`: Variable de estado.
+
+**Métodos:**
+- `setSeed(int newSeed)`: Establece una nueva semilla para el generador.
+- `rand()`: Genera un número aleatorio en el rango de 0 a 32767.
+- `randRange(int range)`: Genera un número aleatorio en el rango de 0 a `range`.
+- `seed(int seed)`: Establece una nueva semilla (`seed`) utilizando el módulo 16.
+- `next()`: Retorna el próximo número aleatorio (puede ser negativo o positivo).
+- `between(int x, int y)`: Retorna un valor aleatorio entre `x` (inclusive) y `y` (no inclusivo).
+
+**Clase Snake**
+
+La clase `Snake` representa una serpiente en un juego, con métodos para manipular su posición, dirección y crecimiento.
+
+**Campos:**
+- `game`: Referencia al juego en el que la serpiente está jugando.
+- `posX`, `posY`: Posición de la cabeza de la serpiente.
+- `length`: Longitud de la serpiente.
+- `growby`: Cantidad de crecimiento cuando la serpiente come un pellet.
+- `togrow`: Cantidad de crecimiento pendiente.
+- `dir`, `lastdir`: Dirección actual y última dirección de la serpiente.
+- `histX`, `histY`: Historial de movimientos de la serpiente.
+- `histSize`: Tamaño del historial.
+
+**Constructor:**
+- Inicializa la serpiente en una posición dada con una longitud y crecimiento específicos.
+- Dibuja la serpiente inicial en el juego.
+
+**Métodos:**
+- `dispose()`: Libera la memoria de la serpiente.
+- `checkRewriteHistory()`: Verifica si es necesario reescribir el historial de la serpiente.
+- `rewriteHistory()`: Reescribe el historial de movimientos de la serpiente.
+- `posX()`, `posY()`: Devuelven la posición de la cabeza de la serpiente.
+- `getLength()`: Devuelve la longitud de la serpiente.
+- `getDir()`, `getLastDir()`: Devuelven la dirección actual y la última dirección de la serpiente.
+- `setDir(int newdir)`: Establece la dirección de la serpiente.
+- `rememberDir()`: Copia la dirección actual a la última dirección.
+- `tryMove()`: Verifica si la serpiente puede moverse en la dirección actual.
+- `grow(int cycle)`: Hace crecer la serpiente.
+- `drawHead(int cycle)`: Dibuja la cabeza de la serpiente.
+- `clearTail(int cycle)`: Borra la cola de la serpiente.
+- `eatFood()`: Incrementa la cantidad de crecimiento pendiente cuando la serpiente come un pellet.
+
+**Clase SnakeGame**
+
+La clase `SnakeGame` representa el juego de la serpiente, con métodos para ejecutar el juego y gestionar sus componentes.
+
+**Campos:**
+- `snake`: Referencia a la serpiente en el juego.
+- `grid`: Referencia al grid del juego.
+- `score`: Puntuación del juego.
+- `level`: Nivel actual del juego.
+- `paused`: Indica si el juego está pausado.
+- `cycle`: Contador de ciclos del juego.
+- `delay`: Tiempo de espera entre ciclos.
+
+**Constructor:**
+- Inicializa las variables del juego.
+- Crea el grid y la serpiente.
+- Coloca un pellet de comida en el grid.
+- Dibuja el estado inicial del juego.
+
+**Métodos:**
+- `dispose()`: Libera la memoria del juego.
+- `run()`: Ejecuta el bucle principal del juego.
+- `nextLevel()`: Incrementa el juego al siguiente nivel.
+- `nextCycle()`: Incrementa el contador de ciclos.
+- Métodos de lectura para obtener información sobre el estado del juego.
+
+**Clase SnakeGrid**
+
+La clase `SnakeGrid` representa el grid del juego de la serpiente, gestionando la posición de la serpiente, la comida y otros elementos del juego.
+
+**Campos:**
+- `game`: Referencia al juego de la serpiente.
+- `sizeX, sizeY`: Tamaño del grid.
+- `foodX, foodY`: Posición de la comida.
+- `grid`: Matriz bidimensional que indica la ocupación de cada bloque en el grid.
+
+**Constructor:**
+- Inicializa las variables del grid.
+- Inicializa la matriz `grid`.
+- Dibuja la línea horizontal que divide el área del juego de la línea de estado.
+
+**Métodos:**
+- `dispose()`: Libera la memoria del grid.
+- `placeFood()`: Selecciona una posición para la comida y la dibuja.
+- `drawFood()`: Dibuja el pellet de comida.
+- `initGrid()`: Inicializa la matriz `grid`.
+- Métodos de lectura para obtener información sobre el grid.
+- Métodos de acceso al grid para gestionar la ocupación y verificación de posiciones.
+- Métodos para dibujar bloques, la línea de estado y mensajes específicos en la pantalla.
+
+**Clase Random**
+
+La clase `Random` en Hack implementa un generador de números pseudoaleatorios (PRNG) y proporciona métodos para generar números aleatorios y establecer semillas.
+
+**Campos:**
+- `seed`: Un entero que representa la semilla del generador.
+- `x`: Una variable de estado utilizada en la generación de números aleatorios.
+
+**Métodos**
+
+-`setSeed(int newSeed)`:Establece una nueva semilla para el generador.
+-`rand()`: Genera un número aleatorio en el rango de 0 a 32767.
+- `randRange(int range)`:Genera un número aleatorio en el rango de 0 a `range`.
+`seed(int seed)`: Establece una nueva semilla (`seed`) utilizando el módulo 16.
+-`next()`:Retorna el próximo número aleatorio (puede ser negativo o positivo).
+-`between(int x, int y)`: Retorna un valor aleatorio entre `x` (inclusive) y `y` (no inclusivo)
+
+# CONCLUSIONES
+
+La implementación detallada de las clases para el juego de Snake revela una cuidadosa estructuración y gestión de los diversos componentes del juego. La lógica detrás de la generación aleatoria de frutas, el manejo de la serpiente, y la estructura de datos para la cola, lista y grid demuestran una planificación meticulosa. La utilización de clases y métodos específicos para funciones como la disposición de elementos, el dibujo en pantalla y la liberación de memoria contribuyen a la legibilidad y mantenibilidad del código. Además, la inclusión de clases como Random proporciona una flexibilidad significativa al permitir la manipulación controlada de números aleatorios. En conjunto, esta implementación constituye una base sólida para el desarrollo y la expansión de un juego de Snake funcional y estructurado.
+
+
