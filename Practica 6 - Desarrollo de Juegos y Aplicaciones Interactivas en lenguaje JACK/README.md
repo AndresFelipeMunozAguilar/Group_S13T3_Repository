@@ -234,3 +234,9 @@ La clase `Random` en Hack implementa un generador de números pseudoaleatorios (
 La implementación detallada de las clases para el juego de Snake revela una cuidadosa estructuración y gestión de los diversos componentes del juego. La lógica detrás de la generación aleatoria de frutas, el manejo de la serpiente, y la estructura de datos para la cola, lista y grid demuestran una planificación meticulosa. La utilización de clases y métodos específicos para funciones como la disposición de elementos, el dibujo en pantalla y la liberación de memoria contribuyen a la legibilidad y mantenibilidad del código. Además, la inclusión de clases como Random proporciona una flexibilidad significativa al permitir la manipulación controlada de números aleatorios. En conjunto, esta implementación constituye una base sólida para el desarrollo y la expansión de un juego de Snake funcional y estructurado.
 
 
+**Fuentes**
+
+- Project 09. (s/f). Nand2tetris. Recuperado el 16 de noviembre de 2023, de https://www.nand2tetris.org/project09
+- chapter 9 lecture.pdf. (s/f). Google Docs. Recuperado el 16 de noviembre de 2023, de https://drive.google.com/file/d/1CAGF8d3pDIOgqX8NZGzU34PPEzvfTYrk/view?pli=1
+
+
