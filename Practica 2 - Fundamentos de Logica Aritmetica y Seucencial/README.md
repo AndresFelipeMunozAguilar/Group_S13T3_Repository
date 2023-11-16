@@ -19,3 +19,7 @@ Las principales diferencias entre la lógica aritmética y la lógica secuencial
 | Estado Interno          | No mantiene un estado interno persistente | Mantiene un estado interno persistente    |
 | Salida                  | Depende sólo de las entradas actuales  | Depende de las entradas actuales y las salidas pasadas     |
 | Ejemplos de Aplicación   | Sumadores, comparadores, operaciones lógicas, multiplicadores  | Registros de desplazamiento, contadores, máquinas de estados, memorias RAM |
+
+** Fuentes **
+- chapter 2 lecture.pdf. (s/f). Google Docs. Recuperado el 16 de noviembre de 2023, de https://drive.google.com/file/d/1ie9s3GjM2TrvL7PrEZJ00gEwezgNLOBm/view
+- Project 02. (s/f). Nand2tetris. Recuperado el 16 de noviembre de 2023, de https://www.nand2tetris.org/project02
