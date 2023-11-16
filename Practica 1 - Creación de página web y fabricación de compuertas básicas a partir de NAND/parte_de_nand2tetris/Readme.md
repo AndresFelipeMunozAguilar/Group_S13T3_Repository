@@ -4,6 +4,7 @@ manera cada uno de los participantes del grupo S13T3 realizó la lógica de su c
 # INTRODUCCIÓN
 En este proyecto, analizamos los fundamentos de la arquitectura de una computadora, donde los componentes más básicos juegan un papel esencial. En el primer proyecto del curso  "nand2tetris", nos sumergimos en la construcción de las compuertas lógicas más elementales, como And, Or, y Mux, junto con sus versiones de 16 bits, And16, Or16, Mux16, y otras. Estas compuertas forman los bloques de construcción esenciales desde los cuales posteriormente ensamblaremos la CPU y la RAM de la computadora. Aquí, nos familiarizamos con la lógica fundamental y aprendemos a construir compuertas a partir de la compuerta primitiva Nand. Cada compuerta que creamos es un paso crucial hacia la construcción de una computadora completamente funcional.
 
+# DESARROLLO
 Andrés Felipe Muñoz Aguilar
 
 - NOT: Primero tomé la propiedad del algebra booleana que dice: A = A + A; entonces, vamos a ver si con "~A" (A negado) se cumple esta condición: 
@@ -117,3 +118,9 @@ El chip DMux4Way es un demultiplexor de 4 vías. Toma una señal de entrada in y
 Para lograr esto, la señal de entrada in se pasa primero a través de dos demultiplexores (DMux) en cascada. El primer demultiplexor utiliza sel[1] como selector para dirigir la señal a one o two. Luego, el segundo demultiplexor utiliza sel[0] como selector para dirigir la señal de one a a o b, y la señal de two a c o d.
 
 El resultado es que, dependiendo de los valores de sel[0] y sel[1], una de las salidas a, b, c o d contendrá la señal de entrada in, mientras que las otras tres salidas serán 0.
+
+** Fuentes **
+- chapter 1 lecture.pdf. (s/f). Google Docs. Recuperado el 16 de noviembre de 2023, de https://drive.google.com/file/d/1MY1buFHo_Wx5DPrKhCNSA2cm5ltwFJzM/view
+- Project 01. (s/f). Nand2tetris. Recuperado el 16 de noviembre de 2023, de https://www.nand2tetris.org/project01
+- Project 1.pdf. (s/f). Google Docs. Recuperado el 16 de noviembre de 2023, de https://drive.google.com/file/d/17Rt3z7_OvpoQNlM6xtmC67Rn3blgM4W5/view
+- (S/f). Nand2tetris.org. Recuperado el 16 de noviembre de 2023, de https://www.nand2tetris.org/_files/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf
