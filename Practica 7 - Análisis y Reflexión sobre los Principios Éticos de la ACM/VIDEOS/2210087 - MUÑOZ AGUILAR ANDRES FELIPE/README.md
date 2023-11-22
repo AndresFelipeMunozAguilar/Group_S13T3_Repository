@@ -1,1 +1,1 @@
-[![VIDEO DE LA REALIZACIÓN DE LA SÉPTIMA PRÁCTICA DE ANDRÉS FELIPE MUÑOZ AGUILAR](https://img.youtube.com/vi/TCUQQOiNXJA/0.jpg)](https://www.youtube.com/watch?v=TCUQQOiNXJA)
+[![Video de la realización de la séptima práctica de Andrés Felipe Muñoz Aguilar](https://github.com/AndresFelipeMunozAguilar/Group_S13T3_Repository/assets/74680151/d219830b-b3d7-44b2-b215-0892f7a9b399)](https://www.youtube.com/watch?v=TCUQQOiNXJA)
