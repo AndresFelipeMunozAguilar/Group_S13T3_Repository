@@ -1,2 +1,1 @@
-[![VIDEO DE LA REALIZACIÓN DE LA SÉPTIMA PRÁCTICA DE ANDRÉS FELIPE MUÑOZ AGUILAR](https://img.youtube.com/vi/TCUQQOiNXJA/0.jpg)]
-(https://www.youtube.com/watch?v=TCUQQOiNXJA)
+[![VIDEO DE LA REALIZACIÓN DE LA SÉPTIMA PRÁCTICA DE ANDRÉS FELIPE MUÑOZ AGUILAR](https://img.youtube.com/vi/TCUQQOiNXJA/0.jpg)](https://www.youtube.com/watch?v=TCUQQOiNXJA)
