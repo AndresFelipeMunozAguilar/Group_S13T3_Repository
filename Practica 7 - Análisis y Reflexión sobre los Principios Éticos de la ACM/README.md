@@ -12,7 +12,7 @@ Acompáñennos en esta reflexión crítica sobre ética y tecnología, donde cad
 
 
 # RESULTADOS OBTENIDOS
- 
+Se logró un análisis exitoso y enriquecedor del código de ética propuesto por la ACM. Este aprendizaje será vital en nuestra formación como profesionales y, especialmente, como profesionales integrales enmarcados en la misión de la Universidad Industrial de Santander. 
 
 
 **Fuentes**
