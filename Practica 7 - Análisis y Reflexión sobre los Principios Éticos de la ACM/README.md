@@ -10,6 +10,8 @@ Finalmente, exploraremos la identificación de los ingenieros de sistemas UIS co
 
 Acompáñennos en esta reflexión crítica sobre ética y tecnología, donde cada segmento será liderado por cada miembro del grupo, proporcionando diversas perspectivas y enriqueciendo el diálogo en torno a estos temas fundamentales para la profesión informática.
 
+**Recuerde hacer click sobre la carpeta "VIDEOS" para redirigirse hacia los distintos videos creados por cada uno de los integrantes**
+
 
 # RESULTADOS OBTENIDOS
 Se logró un análisis exitoso y enriquecedor del código de ética propuesto por la ACM. Este aprendizaje será vital en nuestra formación como profesionales y, especialmente, como profesionales integrales enmarcados en la misión de la Universidad Industrial de Santander. 
