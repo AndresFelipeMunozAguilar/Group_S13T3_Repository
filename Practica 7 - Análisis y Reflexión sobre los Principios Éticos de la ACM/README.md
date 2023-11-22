@@ -2,7 +2,14 @@
 Para la explicación de como se realizó cada uno de los respectivos proyectos de "nand2tetris", ingrese a las carpetas de cada uno de los respectivos proyectos**
 
 # INTRODUCCIÓN
- 
+ En el marco del curso A2 de Arquitectura de Computadores, los integrantes del grupo S13T3 (7) de la Universidad Industrial de Santander, dirigidos por el profesor Carlos Jaime Barrios Hernandez, presentamos una serie de videos que abordan los principios éticos fundamentales propuestos por la Asociación de Maquinaria de Computación (ACM). En esta última práctica del curso, exploraremos críticamente estos principios y sus implicaciones en la ética profesional de los ingenieros de sistemas en la actualidad.
+
+Los integrantes del grupo S13T3 analizaremos la pertinencia de estos principios en el ámbito colombiano y regional, abordando la cuestión de por qué la responsabilidad y las competencias a menudo se subvaloran. Para ilustrar este fenómeno, presentaremos, cada uno, un caso conocido que destaca los desafíos éticos en el medio.
+
+Finalmente, exploraremos la identificación de los ingenieros de sistemas UIS con el código propuesto por la ACM, evaluando la conexión entre estos principios y la comunidad académica de nuestra institución.
+
+Acompáñennos en esta reflexión crítica sobre ética y tecnología, donde cada segmento será liderado por cada miembro del grupo, proporcionando diversas perspectivas y enriqueciendo el diálogo en torno a estos temas fundamentales para la profesión informática.
+
 
 # RESULTADOS OBTENIDOS
  
